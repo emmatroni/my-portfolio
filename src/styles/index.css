@@ -1,0 +1,26 @@
+@import "tailwindcss";
+@import url("https://use.typekit.net/jry1gym.css");
+/* 
+** "helvetica-neue-lt-pro"
+regular --> font-weight: 400
+bold --> font-weight: 700 
+*/
+
+/* "marlide-display-variable"
+** Light --> font-variation-settings: 'wght' 300;
+** regular --> font-variation-settings: 'wght' 400;
+*/
+
+:root {
+  font-family: "helvetica-neue-lt-pro", Helvetica, Arial sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
