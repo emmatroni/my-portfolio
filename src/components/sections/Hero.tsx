@@ -55,34 +55,6 @@ export default function Hero() {
           Specializing in clean, impactful web design.
         </p>
       </div>
-
-      {/* Bottom navigation */}
-      <div
-        className={`absolute bottom-0 left-0 right-0 transition-all duration-1000 delay-1000 ${
-          loaded ? "opacity-100" : "opacity-0"
-        }`}
-      >
-        <div className="flex items-center justify-between px-6 md:px-10 py-4 text-[10px] uppercase tracking-[0.25em]">
-          <a
-            href="#work"
-            className="text-white/30 hover:text-white/60 transition-colors"
-          >
-            Work
-          </a>
-          <a
-            href="#about"
-            className="text-white/30 hover:text-white/60 transition-colors"
-          >
-            About
-          </a>
-          <a
-            href="#contact"
-            className="text-white/60 hover:text-white transition-colors"
-          >
-            Let's Talk
-          </a>
-        </div>
-      </div>
     </section>
   );
 }

@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef } from "react";
-import SectionNav from "../common/SectionNav";
 
 interface Project {
   name: string;
@@ -120,19 +119,18 @@ function ProjectRow({ project, index }: { project: Project; index: number }) {
 
 export default function Work() {
   return (
-    <section id="work" className="bg-black min-h-screen py-8">
-      <SectionNav active="work" />
+    <section
+      id="work"
+      className="bg-black min-h-screen px-6 md:px-10 pt-12 pb-16"
+    >
+      <h2
+        className="text-5xl md:text-7xl lg:text-8xl font-light text-white tracking-tight mb-8"
+        style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+      >
+        All projects
+      </h2>
 
-      <div className="px-6 md:px-10 pt-12 pb-6">
-        <h2
-          className="text-5xl md:text-7xl lg:text-8xl font-light text-white tracking-tight"
-          style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
-        >
-          All projects
-        </h2>
-      </div>
-
-      <div className="px-6 md:px-10">
+      <div>
         {projects.map((project, i) => (
           <ProjectRow key={i} project={project} index={i} />
         ))}

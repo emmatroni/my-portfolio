@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef } from "react";
-import SectionNav from "../common/SectionNav";
 
 export default function About() {
   const ref = useRef<HTMLDivElement>(null);
@@ -17,11 +16,9 @@ export default function About() {
   }, []);
 
   return (
-    <section id="about" className="bg-black min-h-screen py-8">
+    <section id="about" className="bg-black min-h-screen">
       {/* Web Design interstitial */}
-      <SectionNav active="about" />
-
-      <div className="flex items-center justify-center min-h-[50vh] px-6">
+      <div className="flex items-center justify-center min-h-[60vh] px-6">
         <h2
           className="text-5xl md:text-7xl lg:text-9xl font-light text-white tracking-[0.15em]"
           style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
@@ -32,9 +29,7 @@ export default function About() {
       </div>
 
       {/* About text */}
-      <SectionNav active="about" />
-
-      <div ref={ref} className="px-6 md:px-10 lg:px-16 pt-16 pb-12 max-w-5xl">
+      <div ref={ref} className="px-6 md:px-10 lg:px-16 pt-16 pb-20 max-w-5xl">
         <p
           className={`text-2xl md:text-3xl lg:text-[2.75rem] text-white font-medium leading-[1.35] tracking-tight transition-all duration-[1.2s] ${
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"

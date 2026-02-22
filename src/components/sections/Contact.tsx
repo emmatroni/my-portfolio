@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef } from "react";
-import SectionNav from "../common/SectionNav";
 
 export default function Contact() {
   const ref = useRef<HTMLDivElement>(null);
@@ -21,8 +20,6 @@ export default function Contact() {
       id="contact"
       className="relative bg-black min-h-screen overflow-hidden"
     >
-      <SectionNav active="contact" />
-
       {/* Background image */}
       <div className="absolute bottom-0 left-0 right-0 h-[60%] opacity-40">
         <img
@@ -35,7 +32,7 @@ export default function Contact() {
 
       <div
         ref={ref}
-        className="relative z-10 flex flex-col justify-end min-h-[85vh] px-6 md:px-10 pb-12"
+        className="relative z-10 flex flex-col justify-end min-h-screen px-6 md:px-10 pb-16"
       >
         <div className="flex flex-col md:flex-row items-end justify-between gap-10">
           {/* Large title */}
@@ -60,7 +57,7 @@ export default function Contact() {
               <a
                 key={link}
                 href="#"
-                className="group flex items-center gap-2 text-sm text-white/60 hover:text-white transition-colors"
+                className="flex items-center gap-2 text-sm text-white/60 hover:text-white transition-colors"
               >
                 <span className="text-xs">↗</span> {link}
               </a>

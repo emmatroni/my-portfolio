@@ -10,22 +10,21 @@ export default function App() {
   const [activeSection, setActiveSection] = useState("work");
 
   useEffect(() => {
-    const sections = ["contact", "about", "work"];
+    const sectionIds = ["contact", "about", "work"];
+
     const handleScroll = () => {
-      for (const id of sections) {
+      for (const id of sectionIds) {
         const el = document.getElementById(id);
         if (el) {
           const rect = el.getBoundingClientRect();
-          if (
-            rect.top <= window.innerHeight / 2 &&
-            rect.bottom > window.innerHeight / 2
-          ) {
+          if (rect.top <= 80 && rect.bottom > 80) {
             setActiveSection(id);
             return;
           }
         }
       }
     };
+
     window.addEventListener("scroll", handleScroll, { passive: true });
     handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
@@ -33,12 +32,14 @@ export default function App() {
 
   return (
     <div className="bg-black min-h-screen text-white antialiased">
-      <Header activeSection={activeSection} />
+      <Header />
       <Hero />
+      {/* Footer sits here in the flow — after Hero, before content.
+          sticky top-0 makes it stick to the top once scrolled past. */}
+      <Footer activeSection={activeSection} />
       <Work />
       <About />
       <Contact />
-      <Footer />
     </div>
   );
 }
