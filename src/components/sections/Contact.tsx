@@ -35,19 +35,17 @@ export default function Contact() {
         className="relative z-10 flex flex-col justify-end min-h-screen px-6 md:px-10 pb-16"
       >
         <div className="flex flex-col md:flex-row items-end justify-between gap-10">
-          {/* Large title */}
           <h2
             className={`text-7xl md:text-[10rem] lg:text-[14rem] font-light leading-[0.85] text-white tracking-tight transition-all duration-[1.5s] ${
               visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"
             }`}
-            style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+            style={{ fontFamily: "var(--font-display)" }}
           >
             Let's
             <br />
             talk
           </h2>
 
-          {/* Links */}
           <div
             className={`flex flex-col items-start md:items-end gap-3 pb-4 transition-all duration-1000 delay-500 ${
               visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
@@ -57,17 +55,22 @@ export default function Contact() {
               <a
                 key={link}
                 href="#"
-                className="flex items-center gap-2 text-sm text-white/60 hover:text-white transition-colors"
+                className="flex items-center gap-2 text-sm hover:text-white transition-colors"
+                style={{ color: "var(--color-text-muted)" }}
               >
                 <span className="text-xs">↗</span> {link}
               </a>
             ))}
 
-            <div className="mt-6 text-xs text-white/30">
+            <div
+              className="mt-6 text-xs"
+              style={{ color: "var(--color-text-subtle)" }}
+            >
               Get in touch at:{" "}
               <a
-                href="mailto:sbmickle@outlook.com"
-                className="text-white/50 underline underline-offset-4 hover:text-white transition-colors"
+                href="mailto:emma@troni.it"
+                className="underline underline-offset-4 hover:text-white transition-colors"
+                style={{ color: "var(--color-text-muted)" }}
               >
                 emma@troni.it
               </a>

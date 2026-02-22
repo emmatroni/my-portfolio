@@ -10,7 +10,14 @@ const links = [
 
 export default function Footer({ activeSection }: FooterProps) {
   return (
-    <nav className="sticky top-14 z-40 flex items-center justify-between px-6 md:px-10 py-4 bg-black/80 backdrop-blur-md border-b border-white/[0.20]">
+    <nav
+      className="sticky z-40 flex items-center justify-between px-6 md:px-10 py-4 backdrop-blur-md"
+      style={{
+        top: "var(--header-height)",
+        backgroundColor: "var(--surface-blur)",
+        borderBottom: "var(--border-width) solid var(--border-color)",
+      }}
+    >
       {links.map((link) => {
         const isActive = activeSection === link.id;
         return (
@@ -21,10 +28,11 @@ export default function Footer({ activeSection }: FooterProps) {
           >
             {/* Animated dot */}
             <span
-              className="inline-block transition-all duration-500 ease-in-out overflow-hidden"
+              className="inline-block overflow-hidden"
               style={{
                 width: isActive ? "18px" : "0px",
                 opacity: isActive ? 1 : 0,
+                transition: `all var(--transition-normal) ease-in-out`,
               }}
             >
               <span className="text-white text-[8px]">●</span>
@@ -32,11 +40,11 @@ export default function Footer({ activeSection }: FooterProps) {
 
             {/* Label */}
             <span
-              className="transition-colors duration-500 ease-in-out"
               style={{
                 color: isActive
-                  ? "rgba(255,255,255,1)"
-                  : "rgba(255,255,255,0.25)",
+                  ? "var(--color-text)"
+                  : "var(--color-text-subtle)",
+                transition: `color var(--transition-normal) ease-in-out`,
               }}
             >
               {link.label}

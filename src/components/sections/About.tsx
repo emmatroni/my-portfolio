@@ -21,7 +21,7 @@ export default function About() {
       <div className="flex items-center justify-center min-h-[60vh] px-6">
         <h2
           className="text-5xl md:text-7xl lg:text-9xl font-light text-white tracking-[0.15em]"
-          style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+          style={{ fontFamily: "var(--font-display)" }}
         >
           <span className="inline-block mr-4 md:mr-8">Web</span>
           <span className="inline-block">Design</span>
@@ -34,7 +34,7 @@ export default function About() {
           className={`text-2xl md:text-3xl lg:text-[2.75rem] text-white font-medium leading-[1.35] tracking-tight transition-all duration-[1.2s] ${
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
-          style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+          style={{ fontFamily: "var(--font-display)" }}
         >
           I am a Communication Design student at the Politecnico di Milano, with
           a strong specialization in the development of visual identities,
@@ -49,17 +49,25 @@ export default function About() {
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
         >
-          <span className="text-white/50">Get in touch at:</span>
+          <span style={{ color: "var(--color-text-muted)" }}>
+            Get in touch at:
+          </span>
           <a
-            href="mailto:sbmickle@outlook.com"
+            href="mailto:emma@troni.it"
             className="text-white underline underline-offset-4 decoration-white/30 hover:decoration-white transition-colors"
           >
             emma@troni.it
           </a>
-          <span className="text-white/30 text-xs uppercase tracking-wider">
+          <span
+            className="text-xs uppercase tracking-wider"
+            style={{ color: "var(--color-text-subtle)" }}
+          >
             My CV
           </span>
-          <span className="text-white/30 text-xs uppercase tracking-wider">
+          <span
+            className="text-xs uppercase tracking-wider"
+            style={{ color: "var(--color-text-subtle)" }}
+          >
             My Portfolio
           </span>
         </div>

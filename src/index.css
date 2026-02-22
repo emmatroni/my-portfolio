@@ -4,13 +4,46 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ─── Design Tokens ────────────────────────────────────── */
+:root {
+  /* Colors */
+  --color-bg: #000000;
+  --color-text: rgba(255, 255, 255, 1);
+  --color-text-muted: rgba(255, 255, 255, 0.4);
+  --color-text-subtle: rgba(255, 255, 255, 0.25);
+
+  /* Borders */
+  --border-color: rgba(255, 255, 255, 0.2);
+  --border-color-subtle: rgba(255, 255, 255, 0.2);
+  --border-width: 1px;
+
+  /* Surfaces */
+  --surface-blur: rgba(0, 0, 0, 0.8);
+
+  /* Layout */
+  --header-height: 56px;
+  --px-mobile: 24px;
+  --px-desktop: 40px;
+
+  /* Typography */
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-body: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  /* Transitions */
+  --transition-fast: 300ms;
+  --transition-normal: 500ms;
+  --transition-slow: 1000ms;
+}
+
+/* ─── Base ─────────────────────────────────────────────── */
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background: #000;
+  font-family: var(--font-body);
+  background: var(--color-bg);
+  color: var(--color-text);
 }
 
 ::selection {
@@ -18,12 +51,13 @@ body {
   color: #fff;
 }
 
+/* ─── Scrollbar ────────────────────────────────────────── */
 ::-webkit-scrollbar {
   width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #000;
+  background: var(--color-bg);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -33,4 +67,28 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.2);
+}
+
+/* ─── Hero fluid scaling ──────────────────────────────── */
+.hero-section {
+  padding-left: clamp(0px, calc((100vw - 375px) * 40 / 649), var(--px-desktop));
+  padding-right: clamp(
+    0px,
+    calc((100vw - 375px) * 40 / 649),
+    var(--px-desktop)
+  );
+  padding-top: clamp(
+    var(--header-height),
+    calc(var(--header-height) + (100vw - 375px) * 24 / 649),
+    80px
+  );
+  padding-bottom: clamp(0px, calc((100vw - 375px) * 24 / 649), 24px);
+}
+
+.hero-image-box {
+  height: clamp(
+    calc(100vh - 240px),
+    calc(100vh - 56px - (100vw - 375px) * 0.15),
+    100vh
+  );
 }
