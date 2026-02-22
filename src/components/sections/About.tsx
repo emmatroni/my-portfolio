@@ -52,10 +52,7 @@ export default function About() {
           <span style={{ color: "var(--color-text-muted)" }}>
             Get in touch at:
           </span>
-          <a
-            href="mailto:emma@troni.it"
-            className="text-white underline underline-offset-4 decoration-white/30 hover:decoration-white transition-colors"
-          >
+          <a href="mailto:emma@troni.it" className="link-primary">
             emma@troni.it
           </a>
           <span

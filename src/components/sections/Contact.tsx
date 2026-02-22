@@ -55,8 +55,7 @@ export default function Contact() {
               <a
                 key={link}
                 href="#"
-                className="flex items-center gap-2 text-sm hover:text-white transition-colors"
-                style={{ color: "var(--color-text-muted)" }}
+                className="flex items-center gap-2 text-sm link-muted"
               >
                 <span className="text-xs">↗</span> {link}
               </a>
@@ -67,11 +66,7 @@ export default function Contact() {
               style={{ color: "var(--color-text-subtle)" }}
             >
               Get in touch at:{" "}
-              <a
-                href="mailto:emma@troni.it"
-                className="underline underline-offset-4 hover:text-white transition-colors"
-                style={{ color: "var(--color-text-muted)" }}
-              >
+              <a href="mailto:emma@troni.it" className="link-primary">
                 emma@troni.it
               </a>
             </div>

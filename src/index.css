@@ -14,7 +14,7 @@
 
   /* Borders */
   --border-color: rgba(255, 255, 255, 0.2);
-  --border-color-subtle: rgba(255, 255, 255, 0.2);
+  --border-color-subtle: rgba(255, 255, 255, 0.05);
   --border-width: 1px;
 
   /* Surfaces */
@@ -67,6 +67,28 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.2);
+}
+
+/* ─── Global Link Styles ───────────────────────────────── */
+.link-primary {
+  color: white;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-color: rgba(255, 255, 255, 0.3);
+  transition: text-decoration-color var(--transition-fast) ease-in-out;
+}
+
+.link-primary:hover {
+  text-decoration-color: white;
+}
+
+.link-muted {
+  color: var(--color-text-muted);
+  transition: color var(--transition-fast) ease-in-out;
+}
+
+.link-muted:hover {
+  color: white;
 }
 
 /* ─── Hero fluid scaling ──────────────────────────────── */

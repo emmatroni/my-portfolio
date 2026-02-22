@@ -9,23 +9,17 @@ export default function Header() {
       }}
     >
       <div className="flex items-center gap-4">
-        <img src="/cat-white-light.svg" alt="Logo" className="w-10 h-10" />
-        <span className="text-xs uppercase tracking-[0.25em] text-white leading-tight">
+        <img src="/head-cat-white-light.svg" alt="Logo" className="w-10 h-10" />
+        <span className="text-[10px] uppercase tracking-[0.2em] leading-tight text-white/">
           Emma Troni
         </span>
       </div>
-      <span
-        className="hidden md:block text-[10px] uppercase tracking-[0.2em] text-center leading-tight"
-        style={{ color: "var(--color-text-muted)" }}
-      >
+      <span className="hidden md:block text-[10px] uppercase tracking-[0.2em] text-center leading-tight text-white">
         Web and Graphic Designer
         <br />
         Currently based in Milan (IT)
       </span>
-      <span
-        className="text-[10px] uppercase tracking-[0.2em]"
-        style={{ color: "var(--color-text-muted)" }}
-      >
+      <span className="text-[10px] uppercase tracking-[0.2em] text-white">
         @2026
       </span>
     </nav>
