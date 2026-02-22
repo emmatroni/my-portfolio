@@ -69,7 +69,7 @@ export default function Contact() {
                 href="mailto:sbmickle@outlook.com"
                 className="text-white/50 underline underline-offset-4 hover:text-white transition-colors"
               >
-                sbmickle@outlook.com
+                emma@troni.it
               </a>
             </div>
           </div>

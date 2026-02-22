@@ -10,7 +10,7 @@ const links = [
 
 export default function Footer({ activeSection }: FooterProps) {
   return (
-    <nav className="sticky top-14 z-40 flex items-center justify-between px-6 md:px-10 py-4 bg-black/80 backdrop-blur-md border-b border-white/[0.08]">
+    <nav className="sticky top-14 z-40 flex items-center justify-between px-6 md:px-10 py-4 bg-black/80 backdrop-blur-md border-b border-white/[0.20]">
       {links.map((link) => {
         const isActive = activeSection === link.id;
         return (

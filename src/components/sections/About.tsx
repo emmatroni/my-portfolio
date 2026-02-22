@@ -54,10 +54,13 @@ export default function About() {
             href="mailto:sbmickle@outlook.com"
             className="text-white underline underline-offset-4 decoration-white/30 hover:decoration-white transition-colors"
           >
-            sbmickle@outlook.com
+            emma@troni.it
           </a>
           <span className="text-white/30 text-xs uppercase tracking-wider">
-            Scarica CV + Portfolio
+            My CV
+          </span>
+          <span className="text-white/30 text-xs uppercase tracking-wider">
+            My Portfolio
           </span>
         </div>
       </div>
