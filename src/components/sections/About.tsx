@@ -29,9 +29,9 @@ export default function About() {
   return (
     <section id="about" className="bg-black min-h-screen">
       {/* Word Design interstitial */}
-      <div className="flex items-center justify-center min-h-[60vh] px-6">
+      <div className="flex items-center justify-center min-h-[100vh] px-6">
         <h2
-          className="text-5xl md:text-7xl lg:text-9xl font-light text-white tracking-[0.15em] flex items-baseline"
+          className="text-5xl md:text-7xl lg:text-6xl font-light text-white tracking-[0.15em] flex items-baseline"
           style={{ fontFamily: "var(--font-display)" }}
         >
           <RotatingText words={designWords} interval={2500} />

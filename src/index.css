@@ -22,8 +22,8 @@
 
   /* Layout */
   --header-height: 56px;
-  --px-mobile: 24px;
-  --px-desktop: 40px;
+  --px-mobile: 12px;
+  --px-desktop: 24px;
 
   /* Typography */
   --font-display: "Playfair Display", Georgia, serif;
