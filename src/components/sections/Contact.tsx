@@ -32,7 +32,7 @@ export default function Contact() {
 
       <div
         ref={ref}
-        className="relative z-10 flex flex-col justify-end min-h-screen px-6 md:px-10 pb-16"
+        className="relative z-10 flex flex-col justify-end min-h-screen px-6 md:px-3 pb-16"
       >
         <div className="flex flex-col md:flex-row items-end justify-between gap-10">
           <h2

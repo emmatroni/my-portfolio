@@ -11,7 +11,7 @@ const links = [
 export default function Footer({ activeSection }: FooterProps) {
   return (
     <nav
-      className="sticky z-40 flex items-center justify-between px-6 md:px-10 py-4 backdrop-blur-md"
+      className="sticky z-40 flex items-center justify-between px-6 md:px-3 py-4 backdrop-blur-md"
       style={{
         top: "var(--header-height)",
         backgroundColor: "var(--surface-blur)",

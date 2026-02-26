@@ -15,7 +15,7 @@ const labels: NavLabel[] = [
 
 export default function SectionNav({ active }: SectionNavProps) {
   return (
-    <div className="flex items-center justify-between px-6 md:px-10 py-3 border-b border-white/5 text-[10px] uppercase tracking-[0.25em]">
+    <div className="flex items-center justify-between px-6 md:px-3 py-3 border-b border-white/5 text-[10px] uppercase tracking-[0.25em]">
       {labels.map((label) => (
         <a
           key={label.id}

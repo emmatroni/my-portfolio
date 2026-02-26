@@ -40,9 +40,9 @@ export default function About() {
       </div>
 
       {/* About text */}
-      <div ref={ref} className="px-6 md:px-10 lg:px-16 pt-16 pb-20 max-w-5xl">
+      <div ref={ref} className="px-6 md:px-3 lg:px-16 pt-16 pb-20 max-w-5xl">
         <p
-          className={`text-2xl md:text-3xl lg:text-[2.75rem] text-white font-medium leading-[1.35] tracking-tight transition-all duration-[1.2s] ${
+          className={`text-2xl md:text-4xl  text-white font-medium tracking-tight transition-all duration-[1.2s] ${
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
           style={{ fontFamily: "var(--font-display)" }}

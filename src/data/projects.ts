@@ -77,6 +77,121 @@ const projects: Project[] = [
       { src: "/projects/seres-srl/gallery-2.jpg", alt: "Seres brand collateral", size: "half" },
     ],
   },
+  {
+  slug: "atelier-vento",
+  name: "Atelier Vento",
+  field: "Branding",
+  attrs: ["Visual Identity", "Packaging", "Art Direction"],
+  year: "2023",
+  location: "Florence, Italy",
+  color: "#2F5D50",
+  heroImage: "/projects/atelier-vento/hero.jpg",
+  about:
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+  challenges:
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  features: "",
+  links: [
+    { label: "Brand", url: "#" },
+    { label: "Website", url: "#" },
+  ],
+  gallery: [
+    { src: "/projects/atelier-vento/gallery-1.jpg", alt: "Atelier Vento packaging", size: "half" },
+    { src: "/projects/atelier-vento/gallery-2.jpg", alt: "Atelier Vento identity", size: "half" },
+  ],
+},
+{
+  slug: "nord-form",
+  name: "Nord Form",
+  field: "Product Design",
+  attrs: ["Industrial Design", "Branding", "3D"],
+  year: "2024",
+  location: "Copenhagen, Denmark",
+  color: "#3A4653",
+  heroImage: "/projects/nord-form/hero.jpg",
+  about:
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.",
+  challenges:
+    "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+  features: "",
+  links: [
+    { label: "Brand", url: "#" },
+    { label: "Website", url: "#" },
+  ],
+  gallery: [
+    { src: "/projects/nord-form/gallery-1.jpg", alt: "Nord Form product", size: "half" },
+    { src: "/projects/nord-form/gallery-2.jpg", alt: "Nord Form details", size: "half" },
+  ],
+},
+{
+  slug: "studio-lumen",
+  name: "Studio Lumen",
+  field: "Web Design",
+  attrs: ["UI Design", "UX Design", "Development"],
+  year: "2025",
+  location: "Berlin, Germany",
+  color: "#111111",
+  heroImage: "/projects/studio-lumen/hero.jpg",
+  about:
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas faucibus mollis interdum.",
+  challenges:
+    "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  features: "",
+  links: [
+    { label: "Brand", url: "#" },
+    { label: "Website", url: "#" },
+  ],
+  gallery: [
+    { src: "/projects/studio-lumen/gallery-1.jpg", alt: "Studio Lumen interface", size: "half" },
+    { src: "/projects/studio-lumen/gallery-2.jpg", alt: "Studio Lumen layout", size: "half" },
+  ],
+},
+{
+  slug: "oro-cafe",
+  name: "Oro Café",
+  field: "Branding",
+  attrs: ["Visual Identity", "Packaging", "Print"],
+  year: "2022",
+  location: "Barcelona, Spain",
+  color: "#C6A15B",
+  heroImage: "/projects/oro-cafe/hero.jpg",
+  about:
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  challenges:
+    "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+  features: "",
+  links: [
+    { label: "Brand", url: "#" },
+    { label: "Website", url: "#" },
+  ],
+  gallery: [
+    { src: "/projects/oro-cafe/gallery-1.jpg", alt: "Oro Café packaging", size: "half" },
+    { src: "/projects/oro-cafe/gallery-2.jpg", alt: "Oro Café cups", size: "half" },
+  ],
+},
+{
+  slug: "altura-tech",
+  name: "Altura Tech",
+  field: "Digital Product",
+  attrs: ["UI Design", "UX Design", "Design System"],
+  year: "2025",
+  location: "Amsterdam, Netherlands",
+  color: "#4A6CFA",
+  heroImage: "/projects/altura-tech/hero.jpg",
+  about:
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper.",
+  challenges:
+    "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+  features: "",
+  links: [
+    { label: "Brand", url: "#" },
+    { label: "Website", url: "#" },
+  ],
+  gallery: [
+    { src: "/projects/altura-tech/gallery-1.jpg", alt: "Altura dashboard", size: "half" },
+    { src: "/projects/altura-tech/gallery-2.jpg", alt: "Altura mobile UI", size: "half" },
+  ],
+},
 ];
 
 export default projects;

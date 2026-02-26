@@ -34,7 +34,7 @@ export default function Hero() {
         {/* Hero text */}
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
           <p
-            className={`italic text-white/80 text-lg md:text-xl mb-2 transition-all duration-[var(--transition-slow)] delay-300 ${
+            className={` text-white/80 text-lg md:text-xl mb-2 transition-all duration-[var(--transition-slow)] delay-300 ${
               loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
             }`}
             style={{ fontFamily: "var(--font-display)" }}

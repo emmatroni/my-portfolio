@@ -16,7 +16,7 @@ export default function ProjectPage({ project, onBack }: ProjectPageProps) {
     <div className="min-h-screen" style={{ backgroundColor: project.color }}>
       {/* ─── Header bar ──────────────────────────────────── */}
       <nav
-        className="sticky top-0 z-50 flex items-center justify-between px-6 md:px-10 py-4 backdrop-blur-md"
+        className="sticky top-0 z-50 flex items-center justify-between px-6 md:px-3 py-4 backdrop-blur-md"
         style={{
           backgroundColor: `${project.color}ee`,
           borderBottom: "var(--border-width) solid rgba(255,255,255,0.15)",
@@ -42,7 +42,7 @@ export default function ProjectPage({ project, onBack }: ProjectPageProps) {
       </nav>
 
       {/* ─── Title section ───────────────────────────────── */}
-      <section className="px-6 md:px-10 pt-16 md:pt-24 pb-4">
+      <section className="px-6 md:px-3 pt-16 md:pt-24 pb-4">
         <h1
           className="text-5xl md:text-7xl lg:text-9xl font-light text-white tracking-tight leading-[0.95]"
           style={{ fontFamily: "var(--font-display)" }}
@@ -60,7 +60,7 @@ export default function ProjectPage({ project, onBack }: ProjectPageProps) {
       </section>
 
       {/* ─── Hero image ──────────────────────────────────── */}
-      <section className="px-6 md:px-10 pb-8">
+      <section className="px-6 md:px-13pb-8">
         <div className="w-full overflow-hidden rounded-sm">
           <img
             src={project.heroImage}
@@ -71,7 +71,7 @@ export default function ProjectPage({ project, onBack }: ProjectPageProps) {
       </section>
 
       {/* ─── Content grid ────────────────────────────────── */}
-      <section className="px-6 md:px-10 py-8">
+      <section className="px-6 md:px-13py-8">
         {/* Section labels */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
           {["About", "Challenges", "Features"].map((label, i) => (
@@ -126,7 +126,7 @@ export default function ProjectPage({ project, onBack }: ProjectPageProps) {
 
       {/* ─── Gallery ─────────────────────────────────────── */}
       {project.gallery.length > 0 && (
-        <section className="px-6 md:px-10 py-8">
+        <section className="px-6 md:px-13py-8">
           <div className="flex flex-wrap gap-4">
             {project.gallery.map((image, i) => (
               <div
@@ -150,7 +150,7 @@ export default function ProjectPage({ project, onBack }: ProjectPageProps) {
 
       {/* ─── Footer ──────────────────────────────────────── */}
       <footer
-        className="px-6 md:px-10 py-4 flex items-center justify-between text-[9px] uppercase tracking-[0.25em] text-white/30"
+        className="px-6 md:px-13py-4 flex items-center justify-between text-[9px] uppercase tracking-[0.25em] text-white/30"
         style={{
           borderTop: "var(--border-width) solid rgba(255,255,255,0.1)",
         }}

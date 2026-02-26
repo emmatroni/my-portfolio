@@ -9,12 +9,12 @@
   /* Colors */
   --color-bg: #000000;
   --color-text: rgba(255, 255, 255, 1);
-  --color-text-muted: rgba(255, 255, 255, 0.75);
+  --color-text-muted: rgba(255, 255, 255, 0.7);
   --color-text-subtle: rgba(255, 255, 255, 0.5);
 
   /* Borders */
-  --border-color: rgba(255, 255, 255, 0.5);
-  --border-color-subtle: rgba(255, 255, 255, 0.25);
+  --border-color: rgba(255, 255, 255, 0.7);
+  --border-color-subtle: rgba(255, 255, 255, 0.5);
   --border-width: 1px;
 
   /* Surfaces */
@@ -22,8 +22,6 @@
 
   /* Layout */
   --header-height: 56px;
-  --px-mobile: 12px;
-  --px-desktop: 24px;
 
   /* Typography */
   --font-display: "Playfair Display", Georgia, serif;
@@ -199,11 +197,15 @@ body {
 
 /* ─── Hero fluid scaling ──────────────────────────────── */
 .hero-section {
-  padding-left: clamp(0px, calc((100vw - 375px) * 40 / 649), var(--px-desktop));
+  padding-left: clamp(
+    0px,
+    calc((100vw - 375px) * var(--page-px) / 649),
+    var(--page-px)
+  );
   padding-right: clamp(
     0px,
-    calc((100vw - 375px) * 40 / 649),
-    var(--px-desktop)
+    calc((100vw - 375px) * var(--page-px) / 649),
+    var(--page-px)
   );
   padding-top: clamp(
     var(--header-height),
