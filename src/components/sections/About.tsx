@@ -61,23 +61,25 @@ export default function About() {
           }`}
         >
           <span style={{ color: "var(--color-text-muted)" }}>
-            Get in touch at:
+            Learn more about me:
           </span>
-          <a href="mailto:emma@troni.it" className="link-primary">
-            emma@troni.it
+
+          <a
+            href="/cv_2025.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="link-primary"
+          >
+            CV
           </a>
-          <span
-            className="text-xs uppercase tracking-wider"
-            style={{ color: "var(--color-text-subtle)" }}
+          <a
+            href="/portfolio_2025.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="link-primary"
           >
-            My CV
-          </span>
-          <span
-            className="text-xs uppercase tracking-wider"
-            style={{ color: "var(--color-text-subtle)" }}
-          >
-            My Portfolio
-          </span>
+            Portfolio
+          </a>
         </div>
       </div>
     </section>

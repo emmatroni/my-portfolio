@@ -15,14 +15,16 @@ export default function Work({ onProjectClick }: WorkProps) {
         All projects
       </h2>
       <div>
-        {projects.map((project, i) => (
-          <ProjectRow
-            key={project.slug}
-            project={project}
-            index={i}
-            onClick={() => onProjectClick(project.slug)}
-          />
-        ))}
+        {[...projects]
+          .sort((a, b) => Number(b.year) - Number(a.year))
+          .map((project, i) => (
+            <ProjectRow
+              key={project.slug}
+              project={project}
+              index={i}
+              onClick={() => onProjectClick(project.slug)}
+            />
+          ))}
       </div>
     </section>
   );
