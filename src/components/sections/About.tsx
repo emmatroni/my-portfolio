@@ -1,4 +1,15 @@
 import { useState, useEffect, useRef } from "react";
+import RotatingText from "../ui/RotatingText";
+
+const designWords = [
+  "Web",
+  "Graphic",
+  "UI",
+  "UX",
+  "Editorial",
+  "Information",
+  "Speculative",
+];
 
 export default function About() {
   const ref = useRef<HTMLDivElement>(null);
@@ -17,14 +28,14 @@ export default function About() {
 
   return (
     <section id="about" className="bg-black min-h-screen">
-      {/* Web Design interstitial */}
+      {/* Word Design interstitial */}
       <div className="flex items-center justify-center min-h-[60vh] px-6">
         <h2
-          className="text-5xl md:text-7xl lg:text-9xl font-light text-white tracking-[0.15em]"
+          className="text-5xl md:text-7xl lg:text-9xl font-light text-white tracking-[0.15em] flex items-baseline"
           style={{ fontFamily: "var(--font-display)" }}
         >
-          <span className="inline-block mr-4 md:mr-8">Web</span>
-          <span className="inline-block">Design</span>
+          <RotatingText words={designWords} interval={2500} />
+          <span className="inline-block ml-4 md:ml-8">Design</span>
         </h2>
       </div>
 

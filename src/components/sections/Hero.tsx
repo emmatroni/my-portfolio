@@ -14,15 +14,18 @@ export default function Hero() {
       className="relative w-full min-h-screen bg-black flex items-center hero-section"
     >
       {/* Contained image box — fluid styles defined in index.css */}
-      <div className="relative w-full overflow-hidden hero-image-box">
+      <div className="relative w-full overflow-hidden hero-image-box grain-overlay">
         <div
           className={`absolute inset-0 transition-all duration-[1.8s] ease-out ${
             loaded ? "opacity-100 scale-100" : "opacity-0 scale-105"
           }`}
         >
-          <img
-            src="https://images.unsplash.com/photo-1477554193778-9562c28588c0?w=1600&q=80"
-            alt="Lush green botanical leaves"
+          <video
+            src="/prova.webm"
+            autoPlay
+            muted
+            loop
+            playsInline
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/30" />
