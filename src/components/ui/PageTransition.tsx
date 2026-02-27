@@ -7,11 +7,14 @@ const HOLD_DURATION = 800;
 const EXIT_DURATION = 600;
 const TEXT_FADE_IN = 300;
 const TEXT_FADE_OUT = 300;
-const TEXT_SHOW_DELAY = 100; // after enter completes
-const TEXT_HIDE_BEFORE = 100; // before exit starts
+const TEXT_SHOW_DELAY = 100;
+const TEXT_HIDE_BEFORE = 100;
 
 interface PageTransitionProps {
   active: boolean;
+  /** Color the overlay starts as (current page background) */
+  startColor?: string;
+  /** Color the overlay transitions to (destination page background) */
   targetColor?: string;
   onMidpoint?: () => void;
   onComplete?: () => void;
@@ -20,6 +23,7 @@ interface PageTransitionProps {
 
 export default function PageTransition({
   active,
+  startColor = "#000000",
   targetColor = "#000000",
   onMidpoint,
   onComplete,
@@ -28,18 +32,17 @@ export default function PageTransition({
   const [phase, setPhase] = useState<
     "idle" | "enter" | "color" | "hold" | "exit"
   >("idle");
-  const [bgColor, setBgColor] = useState("#000000");
+  const [bgColor, setBgColor] = useState(startColor);
   const [textVisible, setTextVisible] = useState(false);
 
   useEffect(() => {
     if (!active) return;
 
     onStart?.();
-    setBgColor("#000000");
+    setBgColor(startColor);
     setPhase("enter");
     setTextVisible(false);
 
-    // Show text 100ms after slide-in completes
     const textShowTimer = setTimeout(() => {
       setTextVisible(true);
     }, SLIDE_DURATION + TEXT_SHOW_DELAY);
@@ -54,7 +57,6 @@ export default function PageTransition({
       onMidpoint?.();
     }, SLIDE_DURATION + COLOR_DURATION);
 
-    // Hide text 100ms before exit
     const textHideTimer = setTimeout(
       () => {
         setTextVisible(false);
@@ -89,7 +91,7 @@ export default function PageTransition({
       clearTimeout(exitTimer);
       clearTimeout(doneTimer);
     };
-  }, [active, targetColor, onMidpoint, onComplete, onStart]);
+  }, [active, startColor, targetColor, onMidpoint, onComplete, onStart]);
 
   useEffect(() => {
     const id = "page-transition-keyframes";
@@ -150,11 +152,11 @@ export default function PageTransition({
       <h3
         style={{
           fontFamily: "var(--font-display)",
-          fontSize: "clamp(1.5rem, 3vw, 2rem)",
+          fontSize: "clamp(2.5rem, 2vw, 3.5rem)",
           fontWeight: 300,
           color: "white",
           letterSpacing: "0.15em",
-          textTransform: "uppercase",
+          textTransform: "lowercase",
           opacity: textVisible ? 1 : 0,
           transition: textVisible
             ? `opacity ${TEXT_FADE_IN}ms ease-in`

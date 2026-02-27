@@ -2,9 +2,17 @@ import AnimatedLink from "../ui/AnimatedLink";
 
 interface HeaderProps {
   bgColor?: string;
+  onLogoClick?: () => void;
 }
 
-export default function Header({ bgColor }: HeaderProps) {
+export default function Header({ bgColor, onLogoClick }: HeaderProps) {
+  const handleLogoClick = (e: React.MouseEvent) => {
+    if (onLogoClick) {
+      e.preventDefault();
+      onLogoClick();
+    }
+  };
+
   return (
     <nav
       className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4 backdrop-blur-md"
@@ -15,7 +23,7 @@ export default function Header({ bgColor }: HeaderProps) {
       }}
     >
       {/*------------- logo --------------*/}
-      <a href="../index.html" className="flex items-center">
+      <a href="/" onClick={handleLogoClick} className="flex items-center">
         <img
           src="/icons/head-cat-white-light.svg"
           alt="Logo"

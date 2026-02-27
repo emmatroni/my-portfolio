@@ -9,8 +9,18 @@ export default function App() {
   const [currentProject, setCurrentProject] = useState<string | null>(null);
   const [transitioning, setTransitioning] = useState(false);
   const [pendingSlug, setPendingSlug] = useState<string | null>(null);
+  const [startColor, setStartColor] = useState("#000000");
   const [targetColor, setTargetColor] = useState("#000000");
   const [pageFading, setPageFading] = useState(false);
+
+  // Get color of current page
+  const getCurrentColor = useCallback(() => {
+    if (currentProject) {
+      const project = projects.find((p) => p.slug === currentProject);
+      return project?.color || "#000000";
+    }
+    return "#000000";
+  }, [currentProject]);
 
   useEffect(() => {
     const handlePopState = () => {
@@ -25,18 +35,23 @@ export default function App() {
     return () => window.removeEventListener("popstate", handlePopState);
   }, []);
 
-  const navigateToProject = useCallback((slug: string) => {
-    const project = projects.find((p) => p.slug === slug);
-    setTargetColor(project?.color || "#000000");
-    setPendingSlug(slug);
-    setTransitioning(true);
-  }, []);
+  const navigateToProject = useCallback(
+    (slug: string) => {
+      const project = projects.find((p) => p.slug === slug);
+      setStartColor(getCurrentColor());
+      setTargetColor(project?.color || "#000000");
+      setPendingSlug(slug);
+      setTransitioning(true);
+    },
+    [getCurrentColor],
+  );
 
   const navigateHome = useCallback(() => {
+    setStartColor(getCurrentColor());
     setTargetColor("#000000");
     setPendingSlug(null);
     setTransitioning(true);
-  }, []);
+  }, [getCurrentColor]);
 
   const handleStart = useCallback(() => {
     setPageFading(true);
@@ -63,6 +78,7 @@ export default function App() {
 
       <PageTransition
         active={transitioning}
+        startColor={startColor}
         targetColor={targetColor}
         onStart={handleStart}
         onMidpoint={handleMidpoint}

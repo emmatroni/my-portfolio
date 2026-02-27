@@ -14,9 +14,9 @@ export default function Hero() {
       className="relative w-full min-h-screen bg-black flex items-center hero-section"
     >
       {/* Contained video box — fluid styles defined in index.css */}
-      <div className="relative w-full overflow-hidden hero-image-box grain-overlay">
+      <div className="relative w-full overflow-hidden hero-image-box grain-overlay ">
         <div
-          className={`absolute inset-0 transition-all duration-[1.8s] mx-6 ease-out ${
+          className={`absolute inset-0 transition-all duration-[1.8s] mx-0 md:mx-6 lg:mx-6 ease-out ${
             loaded ? "opacity-100 scale-100" : "opacity-0 scale-105"
           }`}
         >
@@ -32,12 +32,17 @@ export default function Hero() {
         </div>
 
         {/* Hero text */}
-        <div className="relative z-10 flex flex-col justify-center items-center h-full px-6">
+        <div className="relative z-10 flex flex-col justify-center items-center h-full px-0 md:px-6 lg:px-6">
           <h1
-            className={`text-4xl md:text-5xl lg:text-6xl text-center font-thin text-white transition-all duration-1000 delay-500  ${
+            className={` text-center font-thin text-white transition-all duration-1000 delay-500  ${
               loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
             }`}
-            style={{ fontFamily: "var(--font-display)" }}
+            style={{
+              fontFamily: "var(--font-display)",
+              letterSpacing: "0.15em",
+              textTransform: "lowercase",
+              fontSize: "clamp(2.5rem, 2vw, 3.5rem)",
+            }}
           >
             emma troni
           </h1>
