@@ -1,5 +1,7 @@
 import { useEffect } from "react";
-import type { Project } from "../../data/projects";
+import type { Project } from "../data/projects";
+import Footer from "../components/common/Footer";
+import Header from "../components/common/Header";
 
 interface ProjectPageProps {
   project: Project;
@@ -15,37 +17,22 @@ export default function ProjectPage({ project, onBack }: ProjectPageProps) {
   return (
     <div className="min-h-screen" style={{ backgroundColor: project.color }}>
       {/* ─── Header bar ──────────────────────────────────── */}
-      <nav
-        className="sticky top-0 z-50 flex items-center justify-between  py-4 px-3"
-        style={{
-          backgroundColor: `${project.color}`,
-          borderBottom: "var(--border-width) solid var(--border-color)",
-        }}
-      >
-        <button
-          onClick={onBack}
-          className="text-[10px] uppercase tracking-[0.2em] text-white/80 hover:text-white transition-colors duration-300 flex items-center gap-2"
-        >
-          ← Home
-        </button>
-        <span className="text-[10px] uppercase tracking-[0.2em] text-white/80">
-          Emma Troni
-        </span>
-        <span className="hidden md:block text-[10px] uppercase tracking-[0.2em] text-white/80 text-center leading-tight">
-          Web and Graphic Designer
-          <br />
-          Currently based in Milan (IT)
-        </span>
-        <span className="text-[10px] uppercase tracking-[0.2em] text-white/80">
-          @2025
-        </span>
-      </nav>
+
+      <Header bgColor={project.color} />
 
       {/* ─── Title section ───────────────────────────────── */}
-      <section className=" pt-16 md:pt-24 pb-4 px-3 flex row justify-between">
+      <section
+        className="pb-4 px-3 flex row justify-between"
+        style={{
+          paddingTop: "clamp(6rem, 15vw, 18rem)",
+        }}
+      >
         <h1
-          className="text-5xl md:text-7xl lg:text-9xl font-light text-white tracking-tight leading-[0.95]"
-          style={{ fontFamily: "var(--font-display)" }}
+          className="font-light text-white tracking-tight leading-[0.95]"
+          style={{
+            fontFamily: "var(--font-display)",
+            fontSize: "clamp(2.5rem, 8vw, 9rem)",
+          }}
         >
           {project.name}
         </h1>
@@ -172,17 +159,9 @@ export default function ProjectPage({ project, onBack }: ProjectPageProps) {
           </div>
         </section>
       )}
-      {/* ─── Gallery ─────────────────────────────────────── */}
 
       {/* ─── Footer ──────────────────────────────────────── */}
-      <footer
-        className=" py-4 flex items-center justify-center text-[9px] uppercase text-white/80 px-3"
-        style={{
-          borderTop: "var(--border-width) solid var(--border-color)",
-        }}
-      >
-        <span>Developed by Emma Troni</span>
-      </footer>
+      <Footer />
     </div>
   );
 }

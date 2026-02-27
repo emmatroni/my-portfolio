@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import type { Project } from "../../data/projects";
+import AnimatedLink from "./AnimatedLink";
 
 interface ProjectRowProps {
   project: Project;
@@ -30,6 +31,7 @@ export default function ProjectRow({
   return (
     <div
       ref={ref}
+      role="button"
       onClick={onClick}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
@@ -41,16 +43,18 @@ export default function ProjectRow({
         borderBottom: "var(--border-width) solid var(--border-color-subtle)",
       }}
     >
-      <span
-        className="text-sm md:text-base font-medium min-w-[140px]"
-        style={{
-          color: hovered ? "var(--color-text)" : "rgba(255,255,255,0.8)",
-          transition: "color var(--transition-fast)",
-        }}
+      {/*---------  name ---------*/}
+      <AnimatedLink
+        onClick={onClick}
+        className="text-sm md:text-base font-medium px-1 py-0.5 text-left"
+        textColor="rgba(255,255,255,0.8)"
+        bgColor="#000000"
+        forceHover={hovered}
       >
         {project.name}
-      </span>
+      </AnimatedLink>
 
+      {/*---------  fields ---------*/}
       <div className="hidden md:flex items-center gap-2 flex-1 justify-center">
         <span
           className="px-3 py-1 rounded-full text-[10px] uppercase tracking-wider"
@@ -74,7 +78,7 @@ export default function ProjectRow({
           </span>
         ))}
       </div>
-
+      {/*--------- year ---------*/}
       <span
         className="text-xs uppercase tracking-[0.2em] font-semibold"
         style={{

@@ -65,7 +65,7 @@ export default function About() {
           </span>
 
           <a
-            href="/cv_2025.pdf"
+            href="/pdf/cv_2025.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="link-primary"
@@ -73,7 +73,7 @@ export default function About() {
             CV
           </a>
           <a
-            href="/portfolio_2025.pdf"
+            href="/pdf/portfolio_2025.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="link-primary"

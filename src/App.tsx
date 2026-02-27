@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import HomePage from "./components/sections/HomePage";
-import ProjectPage from "./components/sections/ProjectPage";
+import HomePage from "./pages/HomePage";
+import ProjectPage from "./pages/ProjectPage";
 import CustomCursor from "./components/ui/CustomCursor";
 import projects from "./data/projects";
 
