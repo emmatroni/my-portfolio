@@ -43,7 +43,7 @@ export default function HomePage({ onProjectClick }: HomePageProps) {
       <Hero />
       <LinkNav activeSection={activeSection} />
       <Work onProjectClick={onProjectClick} />
-      <About />
+      <About onProjectClick={onProjectClick} />
       <Contact />
     </div>
   );

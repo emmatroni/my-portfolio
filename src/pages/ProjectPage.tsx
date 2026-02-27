@@ -24,7 +24,7 @@ export default function ProjectPage({ project, onBack }: ProjectPageProps) {
       <section
         className="pb-4 px-3 flex row justify-between"
         style={{
-          paddingTop: "clamp(6rem, 15vw, 18rem)",
+          paddingTop: "clamp(6rem, 20vw, 30rem)",
         }}
       >
         <h1

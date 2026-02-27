@@ -1,13 +1,17 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import HomePage from "./pages/HomePage";
 import ProjectPage from "./pages/ProjectPage";
 import CustomCursor from "./components/ui/CustomCursor";
+import PageTransition from "./components/ui/PageTransition";
 import projects from "./data/projects";
 
 export default function App() {
   const [currentProject, setCurrentProject] = useState<string | null>(null);
+  const [transitioning, setTransitioning] = useState(false);
+  const [pendingSlug, setPendingSlug] = useState<string | null>(null);
+  const [targetColor, setTargetColor] = useState("#000000");
+  const [pageFading, setPageFading] = useState(false);
 
-  // Handle browser back/forward
   useEffect(() => {
     const handlePopState = () => {
       const path = window.location.pathname;
@@ -21,37 +25,69 @@ export default function App() {
     return () => window.removeEventListener("popstate", handlePopState);
   }, []);
 
-  const navigateToProject = (slug: string) => {
-    setCurrentProject(slug);
-    window.history.pushState({}, "", `/projects/${slug}`);
-  };
+  const navigateToProject = useCallback((slug: string) => {
+    const project = projects.find((p) => p.slug === slug);
+    setTargetColor(project?.color || "#000000");
+    setPendingSlug(slug);
+    setTransitioning(true);
+  }, []);
 
-  const navigateHome = () => {
-    setCurrentProject(null);
-    window.history.pushState({}, "", "/");
-  };
+  const navigateHome = useCallback(() => {
+    setTargetColor("#000000");
+    setPendingSlug(null);
+    setTransitioning(true);
+  }, []);
 
-  // ─── Project page ──────────────────────────────────
-  if (currentProject) {
-    const project = projects.find((p) => p.slug === currentProject);
-    if (!project) {
-      navigateHome();
-      return null;
+  const handleStart = useCallback(() => {
+    setPageFading(true);
+  }, []);
+
+  const handleMidpoint = useCallback(() => {
+    if (pendingSlug) {
+      setCurrentProject(pendingSlug);
+      window.history.pushState({}, "", `/projects/${pendingSlug}`);
+    } else {
+      setCurrentProject(null);
+      window.history.pushState({}, "", "/");
     }
+  }, [pendingSlug]);
 
-    return (
-      <>
-        <CustomCursor />
-        <ProjectPage project={project} onBack={navigateHome} />
-      </>
-    );
-  }
+  const handleComplete = useCallback(() => {
+    setTransitioning(false);
+    setPageFading(false);
+  }, []);
 
-  // ─── Homepage ──────────────────────────────────────
   return (
     <>
       <CustomCursor />
-      <HomePage onProjectClick={navigateToProject} />
+
+      <PageTransition
+        active={transitioning}
+        targetColor={targetColor}
+        onStart={handleStart}
+        onMidpoint={handleMidpoint}
+        onComplete={handleComplete}
+      />
+
+      <div
+        style={{
+          opacity: pageFading ? 0 : 1,
+          transition: "opacity 400ms ease-out",
+        }}
+      >
+        {currentProject ? (
+          (() => {
+            const project = projects.find((p) => p.slug === currentProject);
+            if (!project) {
+              navigateHome();
+              return null;
+            }
+            return <ProjectPage project={project} onBack={navigateHome} />;
+          })()
+        ) : (
+          <HomePage onProjectClick={navigateToProject} />
+        )}
+      </div>
     </>
   );
 }

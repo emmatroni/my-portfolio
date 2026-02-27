@@ -15,7 +15,7 @@ export default function Header({ bgColor }: HeaderProps) {
       }}
     >
       {/*------------- logo --------------*/}
-      <a href="./index.html" className="flex items-center">
+      <a href="../index.html" className="flex items-center">
         <img
           src="/icons/head-cat-white-light.svg"
           alt="Logo"

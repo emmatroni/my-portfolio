@@ -78,22 +78,22 @@ DesignVerso is an editorial series that collects monographic magazine prototypes
     slug: "vaglio-and-partners",
     name: "Vaglio And Partners",
     field: "Branding",
-    attrs: ["", "Visual Identity", "Web Design", "Print"],
-    year: "2023",
-    location: "Venice, Italy",
-    color: "#8B3A3A",
-    heroImage: "/projects/seres-srl/hero.jpg",
+    attrs: ["Brand Identity", "Web Design"],
+    year: "2024",
+    location: "Milan, Italy",
+    color: "#10273C",
+    heroImage: "/projects/vaglio-and-partners/hero.png",
     about:
-      "Petra has captured imaginations for centuries, but few can witness its beauty in person. In collaboration with Google, we created a virtual experience that gives people everywhere a chance to explore the UNESCO World Heritage site in extraordinary detail, unlocking new ways to discover one of the world's most iconic places.\n\nPetra has captured imaginations for centuries, but few can witness its beauty in person. In collaboration with Google, we created a virtual experience that gives people everywhere a chance to explore the UNESCO World Heritage site in extraordinary detail, unlocking new ways to discover one of the world's most iconic.",
+      "Creation of a unique brand image for a consulting firm based in Milan, specialized in organizational and managerial development for businesses across Italy. The color palette reflects the company’s core values of security, building positive relationships with clients, and trust. The design aims to communicate these principles while positioning the company as a reliable partner for business growth and success.",
     challenges:
-      "The challenge entrusted was to put pep and coherence back into the ageing and frozen visual identity of the family business. How to translate the taste emotions felt by the consumer when he discovers the benefits of aromatic herbs in the mouth? It was a matter of designing a visual universe that values both the freshness of the products and their ability to awaken sensations full of colours and surprises.",
+      "The challenge entrusted was to create a practical and evocative visual identity of the business. ",
     links: [
       { label: "Brand", url: "#" },
       { label: "Website", url: "#" },
     ],
     gallery: [
-      { src: "/projects/seres-srl/gallery-2.png", alt: "Seres tote bag", size: "half" },
-      { src: "/projects/seres-srl/gallery-1.jpg", alt: "Seres brand collateral", size: "half" },
+      { src: "/projects/vaglio-and-partners/gallery-1.jpg", alt: "Buisness cards", size: "half" },
+      { src: "/projects/vaglio-and-partners/gallery-2.jpg", alt: "Logo", size: "half" },
     ],
   },
 ];
