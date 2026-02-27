@@ -19,7 +19,11 @@ export default function Header() {
         <br />
         Currently based in Milan (IT)
       </span>
-      <a href="#" className="text-[11px] uppercase text-white">
+      <a
+        href="https://emmatroni.webflow.io/"
+        target="blank"
+        className="text-[11px] uppercase text-white link-"
+      >
         PLAYGROUND
       </a>
     </nav>

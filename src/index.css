@@ -218,9 +218,11 @@ body {
 }
 
 .hero-image-box {
-  height: clamp(
-    calc(100vh),
-    calc(100vh - 56px - (100vw - 375px) * 0.15),
-    100vh
-  );
+  height: calc(100vh);
+}
+
+@media (min-width: 1024px) {
+  .hero-image-box {
+    height: 40vh;
+  }
 }
