@@ -26,7 +26,7 @@ export default function ProjectPage({ project, onBack }: ProjectPageProps) {
           onClick={onBack}
           className="text-[10px] uppercase tracking-[0.2em] text-white/80 hover:text-white transition-colors duration-300 flex items-center gap-2"
         >
-          ← Back
+          ← Home
         </button>
         <span className="text-[10px] uppercase tracking-[0.2em] text-white/80">
           Emma Troni
@@ -49,7 +49,7 @@ export default function ProjectPage({ project, onBack }: ProjectPageProps) {
         >
           {project.name}
         </h1>
-        <div className="flex items-center justify-between mt-6 gap-5 items-end">
+        <div className="flex justify-between mt-6 gap-5 items-end">
           <span className="text-[10px] uppercase tracking-[0.2em] text-white/60">
             {project.location}
           </span>

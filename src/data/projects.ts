@@ -57,7 +57,7 @@ DesignVerso is an editorial series that collects monographic magazine prototypes
     name: "Seres Srl",
     field: "Branding",
     attrs: ["Visual Identity", "Web Design", "Print"],
-    year: "2024",
+    year: "2023",
     location: "Venice, Italy",
     color: "#8B3A3A",
     heroImage: "/projects/seres-srl/hero.jpg",
@@ -70,8 +70,8 @@ DesignVerso is an editorial series that collects monographic magazine prototypes
       { label: "Website", url: "#" },
     ],
     gallery: [
-      { src: "/projects/seres-srl/gallery-1.jpg", alt: "Seres tote bag", size: "half" },
-      { src: "/projects/seres-srl/gallery-2.jpg", alt: "Seres brand collateral", size: "half" },
+      { src: "/projects/seres-srl/gallery-2.png", alt: "Seres tote bag", size: "half" },
+      { src: "/projects/seres-srl/gallery-1.jpg", alt: "Seres brand collateral", size: "half" },
     ],
   },
 ];
