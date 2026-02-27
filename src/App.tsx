@@ -9,7 +9,7 @@ import ProjectPage from "./components/sections/ProjectPage";
 import projects from "./data/projects";
 
 export default function App() {
-  const [activeSection, setActiveSection] = useState("work");
+  const [activeSection, setActiveSection] = useState("");
   const [currentProject, setCurrentProject] = useState<string | null>(null);
 
   // Handle browser back/forward

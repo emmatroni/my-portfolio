@@ -8,11 +8,11 @@ export default function Header() {
         borderBottom: "var(--border-width) solid var(--border-color)",
       }}
     >
-      <a href="#" className="flex items-center gap-4">
+      <a href="#" className="flex items-center ">
         <img src="/head-cat-white-light.svg" alt="Logo" className="w-10 h-10" />
-        <span className="text-[11px] uppercase leading-tight text-white not-italic">
-          Emma Troni
-        </span>
+        {/* <span className="text-[11px] uppercase leading-tight text-white not-italic">
+          ET
+        </span> */}
       </a>
       <span className="hidden md:block text-[11px] uppercase text-center leading-tight text-white">
         Web and Graphic Designer

@@ -11,11 +11,12 @@ const links = [
 export default function Footer({ activeSection }: FooterProps) {
   return (
     <nav
-      className="sticky z-40 flex items-center justify-between px-6 md:px-6 py-4 backdrop-blur-md "
+      className="sticky z-40 flex items-center justify-between px-6 py-4 backdrop-blur-md -mt-12"
       style={{
         top: "var(--header-height)",
         backgroundColor: "var(--surface-blur)",
         borderBottom: "var(--border-width) solid var(--border-color)",
+        borderTop: "var(--border-width) solid var(--border-color)",
       }}
     >
       {links.map((link) => {
@@ -24,7 +25,7 @@ export default function Footer({ activeSection }: FooterProps) {
           <a
             key={link.id}
             href={`#${link.id}`}
-            className="relative flex items-center gap-0 text-[11px] uppercase group "
+            className="relative flex items-center gap-0 text-[11px] uppercase group"
           >
             {/* Animated dot */}
             <span
@@ -35,7 +36,7 @@ export default function Footer({ activeSection }: FooterProps) {
                 transition: `all var(--transition-normal) ease-in-out`,
               }}
             >
-              <span className="text-white text-[8px] ">●</span>
+              <span className="text-white text-[8px]">●</span>
             </span>
 
             {/* Label */}

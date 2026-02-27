@@ -18,7 +18,7 @@
   --border-width: 1px;
 
   /* Surfaces */
-  --surface-blur: rgba(0, 0, 0, 0.8);
+  --surface-blur: rgba(0, 0, 0, 1);
 
   /* Layout */
   --header-height: 56px;
@@ -48,7 +48,9 @@ body {
   background: rgba(255, 255, 255, 0.15);
   color: #fff;
 }
-
+#work {
+  scroll-margin-top: calc(var(--header-height) + 48px);
+}
 /* ─── Scrollbar ────────────────────────────────────────── */
 ::-webkit-scrollbar {
   width: 6px;
