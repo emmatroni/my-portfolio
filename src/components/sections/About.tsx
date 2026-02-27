@@ -12,7 +12,7 @@ const designWords = [
   "Speculative",
 ];
 
-// ─── Trail images (replace with your own) ───
+// ─── Trail images ───
 const trailImages = [
   "/projects/erberto-carboni/gallery-1.jpg",
   "/projects/erberto-carboni/gallery-2.jpg",
@@ -20,7 +20,7 @@ const trailImages = [
   "/projects/seres-srl/gallery-2.jpg",
 ];
 
-// ─── Scroll reveal settings ───
+// ─── scroll reveal settings ───
 const REVEAL_START = 0.85; // viewport % where reveal begins (0 = top, 1 = bottom)
 const REVEAL_END = 0.2; // viewport % where reveal completes
 const MIN_OPACITY = 0.15; // opacity of words not yet revealed
