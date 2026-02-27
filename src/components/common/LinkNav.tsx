@@ -1,7 +1,8 @@
 import AnimatedLink from "../ui/AnimatedLink";
 
-interface FooterProps {
+interface LinkNavProps {
   activeSection: string;
+  loaded?: boolean;
 }
 
 const links = [
@@ -10,7 +11,10 @@ const links = [
   { id: "contact", label: "Let's Talk" },
 ];
 
-export default function LinkNav({ activeSection }: FooterProps) {
+export default function LinkNav({
+  activeSection,
+  loaded = true,
+}: LinkNavProps) {
   return (
     <nav
       className="sticky z-40 flex items-center justify-between px-6 py-4 backdrop-blur-md -mt-12"
@@ -19,6 +23,10 @@ export default function LinkNav({ activeSection }: FooterProps) {
         backgroundColor: "var(--surface-blur)",
         borderBottom: "var(--border-width) solid var(--border-color)",
         borderTop: "var(--border-width) solid var(--border-color)",
+        opacity: loaded ? 1 : 0,
+        transform: loaded ? "translateY(0)" : "translateY(-10px)",
+        transition:
+          "opacity 800ms ease-out 100ms, transform 800ms ease-out 100ms",
       }}
     >
       {links.map((link) => {

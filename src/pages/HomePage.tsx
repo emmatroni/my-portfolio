@@ -8,9 +8,13 @@ import Contact from "../components/sections/Contact";
 
 interface HomePageProps {
   onProjectClick: (slug: string) => void;
+  loaded?: boolean;
 }
 
-export default function HomePage({ onProjectClick }: HomePageProps) {
+export default function HomePage({
+  onProjectClick,
+  loaded = true,
+}: HomePageProps) {
   const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
@@ -39,9 +43,9 @@ export default function HomePage({ onProjectClick }: HomePageProps) {
 
   return (
     <div className="bg-black min-h-screen text-white antialiased">
-      <Header />
+      <Header loaded={loaded} />
       <Hero />
-      <LinkNav activeSection={activeSection} />
+      <LinkNav activeSection={activeSection} loaded={loaded} />
       <Work onProjectClick={onProjectClick} />
       <About onProjectClick={onProjectClick} />
       <Contact />

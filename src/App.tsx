@@ -3,9 +3,11 @@ import HomePage from "./pages/HomePage";
 import ProjectPage from "./pages/ProjectPage";
 import CustomCursor from "./components/ui/CustomCursor";
 import PageTransition from "./components/ui/PageTransition";
+import PageLoader from "./components/ui/PageLoader";
 import projects from "./data/projects";
 
 export default function App() {
+  const [loaded, setLoaded] = useState(false);
   const [currentProject, setCurrentProject] = useState<string | null>(null);
   const [transitioning, setTransitioning] = useState(false);
   const [pendingSlug, setPendingSlug] = useState<string | null>(null);
@@ -74,6 +76,8 @@ export default function App() {
 
   return (
     <>
+      {!loaded && <PageLoader onComplete={() => setLoaded(true)} />}
+
       <CustomCursor />
 
       <PageTransition
@@ -101,7 +105,7 @@ export default function App() {
             return <ProjectPage project={project} onBack={navigateHome} />;
           })()
         ) : (
-          <HomePage onProjectClick={navigateToProject} />
+          <HomePage onProjectClick={navigateToProject} loaded={loaded} />
         )}
       </div>
     </>

@@ -5,6 +5,37 @@ interface ProjectGalleryProps {
   project: Project;
 }
 
+/**
+ * Assigns column spans based on image index for visual variety.
+ * Pattern repeats: 4+8, 8+4, 6+6, 12 (full), ...
+ */
+function getColSpan(index: number, total: number): string {
+  // Single image → full width
+  if (total === 1) return "md:col-span-12";
+
+  // Two images → 4+8
+  if (total === 2) {
+    return index === 0
+      ? "md:col-span-6 xl:col-span-4"
+      : "md:col-span-6 xl:col-span-8";
+  }
+
+  // 3+ images → alternating pattern
+  const pattern = index % 4;
+  switch (pattern) {
+    case 0:
+      return "md:col-span-6 xl:col-span-4";
+    case 1:
+      return "md:col-span-6 xl:col-span-8";
+    case 2:
+      return "md:col-span-6 xl:col-span-8";
+    case 3:
+      return "md:col-span-6 xl:col-span-4";
+    default:
+      return "md:col-span-6";
+  }
+}
+
 export default function ProjectGallery({ project }: ProjectGalleryProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
@@ -38,11 +69,7 @@ export default function ProjectGallery({ project }: ProjectGalleryProps) {
         {project.gallery.map((image, i) => (
           <div
             key={i}
-            className={`overflow-hidden rounded-sm ${
-              i === 0
-                ? "md:col-span-6 xl:col-span-4"
-                : "md:col-span-6 xl:col-span-8"
-            }`}
+            className={`overflow-hidden rounded-sm ${getColSpan(i, project.gallery.length)}`}
           >
             <img
               src={image.src}

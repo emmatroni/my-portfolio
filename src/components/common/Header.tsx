@@ -3,9 +3,14 @@ import AnimatedLink from "../ui/AnimatedLink";
 interface HeaderProps {
   bgColor?: string;
   onLogoClick?: () => void;
+  loaded?: boolean;
 }
 
-export default function Header({ bgColor, onLogoClick }: HeaderProps) {
+export default function Header({
+  bgColor,
+  onLogoClick,
+  loaded = true,
+}: HeaderProps) {
   const handleLogoClick = (e: React.MouseEvent) => {
     if (onLogoClick) {
       e.preventDefault();
@@ -20,9 +25,11 @@ export default function Header({ bgColor, onLogoClick }: HeaderProps) {
         height: "var(--header-height)",
         backgroundColor: bgColor || "var(--surface-blur)",
         borderBottom: "var(--border-width) solid var(--border-color)",
+        opacity: loaded ? 1 : 0,
+        transform: loaded ? "translateY(0)" : "translateY(-20px)",
+        transition: "opacity 800ms ease-out, transform 800ms ease-out",
       }}
     >
-      {/*------------- logo --------------*/}
       <a href="/" onClick={handleLogoClick} className="flex items-center">
         <img
           src="/icons/head-cat-white-light.svg"
