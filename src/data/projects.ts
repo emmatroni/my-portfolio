@@ -75,10 +75,10 @@ DesignVerso is an editorial series that collects monographic magazine prototypes
     ],
   },
   {
-    slug: "seres-srl",
-    name: "Seres Srl",
+    slug: "vaglio-and-partners",
+    name: "Vaglio And Partners",
     field: "Branding",
-    attrs: ["Visual Identity", "Web Design", "Print"],
+    attrs: ["", "Visual Identity", "Web Design", "Print"],
     year: "2023",
     location: "Venice, Italy",
     color: "#8B3A3A",
