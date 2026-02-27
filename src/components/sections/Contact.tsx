@@ -21,10 +21,13 @@ export default function Contact() {
       className="relative bg-black min-h-screen overflow-hidden"
     >
       {/* Background image */}
-      <div className="absolute bottom-0 left-0 right-0 h-[60%] opacity-40">
-        <img
-          src="https://images.unsplash.com/photo-1477554193778-9562c28588c0?w=1600&q=80"
-          alt="Botanical leaves"
+      <div className="absolute bottom-0 left-0 right-0 h-[60%] opacity-40  overflow-hidden hero-image-box ">
+        <video
+          src="/prova.webm"
+          autoPlay
+          muted
+          loop
+          playsInline
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
@@ -47,7 +50,7 @@ export default function Contact() {
           </h2>
 
           <div
-            className={`flex flex-col items-start md:items-end gap-3 pb-4 transition-all duration-1000 delay-500 ${
+            className={`flex flex-col items-start md:items-end gap-3 transition-all duration-1000 delay-500 ${
               visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
             }`}
           >
@@ -62,7 +65,7 @@ export default function Contact() {
             ))}
 
             <div
-              className="mt-6 text-xs"
+              className="mt-6 text-[14px]"
               style={{ color: "var(--color-text-subtle)" }}
             >
               Get in touch at:{" "}

@@ -207,17 +207,17 @@ body {
     calc((100vw - 375px) * var(--page-px) / 649),
     var(--page-px)
   );
-  padding-top: clamp(
+  /* padding-top: clamp(
     var(--header-height),
     calc(var(--header-height) + (100vw - 375px) * 24 / 649),
     80px
-  );
-  padding-bottom: clamp(0px, calc((100vw - 375px) * 24 / 649), 24px);
+  ); */
+  /* padding-bottom: clamp(0px, calc((100vw - 375px) * 24 / 649), 24px); */
 }
 
 .hero-image-box {
   height: clamp(
-    calc(100vh - 240px),
+    calc(100vh),
     calc(100vh - 56px - (100vw - 375px) * 0.15),
     100vh
   );

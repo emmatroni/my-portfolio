@@ -11,7 +11,7 @@ const links = [
 export default function Footer({ activeSection }: FooterProps) {
   return (
     <nav
-      className="sticky z-40 flex items-center justify-between px-6 md:px-3 py-4 backdrop-blur-md"
+      className="sticky z-40 flex items-center justify-between px-6 md:px-6 py-4 backdrop-blur-md "
       style={{
         top: "var(--header-height)",
         backgroundColor: "var(--surface-blur)",
@@ -24,7 +24,7 @@ export default function Footer({ activeSection }: FooterProps) {
           <a
             key={link.id}
             href={`#${link.id}`}
-            className="relative flex items-center gap-0 text-[10px] uppercase tracking-[0.25em] group"
+            className="relative flex items-center gap-0 text-[11px] uppercase group "
           >
             {/* Animated dot */}
             <span
@@ -35,20 +35,15 @@ export default function Footer({ activeSection }: FooterProps) {
                 transition: `all var(--transition-normal) ease-in-out`,
               }}
             >
-              <span className="text-white text-[8px]">●</span>
+              <span className="text-white text-[8px] ">●</span>
             </span>
 
             {/* Label */}
-            <span
-              style={{
-                color: isActive
-                  ? "var(--color-text)"
-                  : "var(--color-text-subtle)",
-                transition: `color var(--transition-normal) ease-in-out`,
-              }}
-            >
-              {link.label}
-            </span>
+            {isActive ? (
+              <span style={{ color: "var(--color-text)" }}>{link.label}</span>
+            ) : (
+              <span className="link-muted">{link.label}</span>
+            )}
           </a>
         );
       })}

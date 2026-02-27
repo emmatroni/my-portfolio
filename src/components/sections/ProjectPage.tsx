@@ -172,17 +172,16 @@ export default function ProjectPage({ project, onBack }: ProjectPageProps) {
           </div>
         </section>
       )}
+      {/* ─── Gallery ─────────────────────────────────────── */}
 
       {/* ─── Footer ──────────────────────────────────────── */}
       <footer
-        className=" py-4 flex items-center justify-between text-[9px] uppercase tracking-[0.25em] text-white/80 px-3"
+        className=" py-4 flex items-center justify-center text-[9px] uppercase text-white/80 px-3"
         style={{
           borderTop: "var(--border-width) solid var(--border-color)",
         }}
       >
-        <span>Emma Troni</span>
-        <span>Web and Graphic Designer · Milan (IT)</span>
-        <span>© 2025</span>
+        <span>Developed by Emma Troni</span>
       </footer>
     </div>
   );
