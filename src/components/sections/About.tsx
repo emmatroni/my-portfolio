@@ -13,12 +13,28 @@ const designWords = [
   "Speculative",
 ];
 
-// ─── Trail images (replace with your own) ───
+// ─── Trail images (from all projects) ───
 const trailImages: TrailImage[] = [
   { src: "/projects/erberto-carboni/gallery-1.jpg", slug: "erberto-carboni" },
   { src: "/projects/erberto-carboni/gallery-2.jpg", slug: "erberto-carboni" },
   { src: "/projects/seres-srl/gallery-1.jpg", slug: "seres-srl" },
-  { src: "/projects/seres-srl/gallery-2.jpg", slug: "seres-srl" },
+  { src: "/projects/seres-srl/gallery-2.png", slug: "seres-srl" },
+  {
+    src: "/projects/vaglio-and-partners/gallery-1.jpg",
+    slug: "vaglio-and-partners",
+  },
+  {
+    src: "/projects/vaglio-and-partners/gallery-2.jpg",
+    slug: "vaglio-and-partners",
+  },
+  {
+    src: "/projects/vaglio-and-partners/gallery-3.png",
+    slug: "vaglio-and-partners",
+  },
+  {
+    src: "/projects/vaglio-and-partners/gallery-4.jpg",
+    slug: "vaglio-and-partners",
+  },
 ];
 
 // ─── Scroll reveal settings ───
