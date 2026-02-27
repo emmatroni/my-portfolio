@@ -23,7 +23,6 @@ export default function LinkNav({ activeSection }: FooterProps) {
     >
       {links.map((link) => {
         const isActive = activeSection === link.id;
-
         return (
           <div key={link.id} className="relative flex items-center gap-0">
             <span
@@ -39,24 +38,17 @@ export default function LinkNav({ activeSection }: FooterProps) {
               </span>
             </span>
 
-            {isActive ? (
-              <a
-                href={`#${link.id}`}
-                className="text-[11px] uppercase"
-                style={{ color: "var(--color-text)" }}
-              >
-                {link.label}
-              </a>
-            ) : (
-              <AnimatedLink
-                href={`#${link.id}`}
-                className="text-[11px] uppercase px-1 py-0.5"
-                textColor="var(--color-text-muted)"
-                bgColor="#000000"
-              >
-                {link.label}
-              </AnimatedLink>
-            )}
+            <AnimatedLink
+              href={`#${link.id}`}
+              className="text-[11px] uppercase px-1 py-0.5"
+              textColor={
+                isActive ? "rgba(255,255,255,1)" : "rgba(255,255,255,0.7)"
+              }
+              bgColor="#000000"
+              sweepColor="#ffffff"
+            >
+              {link.label}
+            </AnimatedLink>
           </div>
         );
       })}

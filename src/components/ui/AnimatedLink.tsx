@@ -12,7 +12,6 @@
 // <AnimatedLink onClick={onBack} bgColor={project.color} className="text-[10px] uppercase">
 //   ← Back
 // </AnimatedLink>
-
 import { useState } from "react";
 
 interface AnimatedLinkProps {
@@ -20,10 +19,12 @@ interface AnimatedLinkProps {
   onClick?: () => void;
   children: React.ReactNode;
   className?: string;
-  /** Background color of the page (default: black) */
+  /** Background color of the page — text becomes this color on hover */
   bgColor?: string;
-  /** Text color when not hovered (default: muted) */
+  /** Text color when not hovered */
   textColor?: string;
+  /** Color of the sweep rectangle (default: white) */
+  sweepColor?: string;
   /** Force hover state from parent */
   forceHover?: boolean;
   target?: string;
@@ -36,7 +37,8 @@ export default function AnimatedLink({
   children,
   className = "",
   bgColor = "#000000",
-  textColor = "var(--color-text-muted)",
+  textColor = "rgba(255,255,255)",
+  sweepColor = "#ffffff",
   forceHover,
   target,
   rel,
@@ -64,7 +66,7 @@ export default function AnimatedLink({
       <span
         className="absolute inset-0 z-0"
         style={{
-          backgroundColor: "white",
+          backgroundColor: sweepColor,
           transform: hovered ? "scaleX(1)" : "scaleX(0)",
           transformOrigin: "left",
           transition: "transform 400ms ease-out",

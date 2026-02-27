@@ -14,7 +14,8 @@ export default function Header({ bgColor }: HeaderProps) {
         borderBottom: "var(--border-width) solid var(--border-color)",
       }}
     >
-      <a href="#" className="flex items-center">
+      {/*------------- logo --------------*/}
+      <a href="./index.html" className="flex items-center">
         <img
           src="/icons/head-cat-white-light.svg"
           alt="Logo"
@@ -30,7 +31,7 @@ export default function Header({ bgColor }: HeaderProps) {
         href="https://emmatroni.webflow.io/"
         target="_blank"
         rel="noopener noreferrer"
-        className="text-[11px] uppercase text-white link-muted"
+        className="text-[11px] uppercase text-white"
       >
         PLAYGROUND
       </AnimatedLink>

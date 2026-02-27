@@ -60,7 +60,8 @@ export default function ProjectRow({
           className="px-3 py-1 rounded-full text-[10px] uppercase tracking-wider"
           style={{
             border: "var(--border-width) solid rgba(255,255,255,0.15)",
-            color: "var(--color-text-muted)",
+            color: hovered ? "rgba(255,255,255,1)" : "var(--color-text-muted)",
+            transition: "color 400ms ease-out",
           }}
         >
           {project.field}
@@ -71,19 +72,23 @@ export default function ProjectRow({
             className="px-3 py-1 rounded-full text-[10px] uppercase tracking-wider"
             style={{
               border: "var(--border-width) solid rgba(255,255,255,0.15)",
-              color: "var(--color-text-muted)",
+              color: hovered
+                ? "rgba(255,255,255,1)"
+                : "var(--color-text-muted)",
+              transition: "color 400ms ease-out",
             }}
           >
             {attr}
           </span>
         ))}
       </div>
+
       {/*--------- year ---------*/}
       <span
         className="text-xs uppercase tracking-[0.2em] font-semibold"
         style={{
-          color: hovered ? "var(--color-text)" : "var(--color-text-subtle)",
-          transition: "color var(--transition-fast)",
+          color: hovered ? "rgba(255,255,255,1)" : "var(--color-text-subtle)",
+          transition: "color 400ms ease-out",
         }}
       >
         {project.year}
