@@ -1,64 +1,65 @@
-import AnimatedLink from "../ui/AnimatedLink";
+import { useState } from "react";
 
-interface FooterProps {
-  activeSection: string;
+interface AnimatedLinkProps {
+  href?: string;
+  onClick?: () => void;
+  children: React.ReactNode;
+  className?: string;
+  /** Background color of the page — text becomes this color on hover */
+  bgColor?: string;
+  /** Text color when not hovered */
+  textColor?: string;
+  /** Color of the sweep rectangle (default: white) */
+  sweepColor?: string;
+  /** Force hover state from parent */
+  forceHover?: boolean;
+  target?: string;
+  rel?: string;
 }
 
-const links = [
-  { id: "work", label: "Work" },
-  { id: "about", label: "About" },
-  { id: "contact", label: "Let's Talk" },
-];
+export default function AnimatedLink({
+  href,
+  onClick,
+  children,
+  className = "",
+  bgColor = "#000000",
+  textColor = "rgba(255,255,255,0.7)",
+  sweepColor = "#ffffff",
+  forceHover,
+  target,
+  rel,
+}: AnimatedLinkProps) {
+  const [selfHovered, setSelfHovered] = useState(false);
+  const hovered = forceHover !== undefined ? forceHover : selfHovered;
 
-export default function LinkNav({ activeSection }: FooterProps) {
+  const Tag = href ? "a" : "button";
+
   return (
-    <nav
-      className="sticky z-40 flex items-center justify-between px-6 py-4 backdrop-blur-md -mt-12"
+    <Tag
+      href={href || undefined}
+      onClick={onClick}
+      target={target}
+      rel={rel}
+      className={`relative inline-block overflow-hidden ${className}`}
+      onMouseEnter={() => setSelfHovered(true)}
+      onMouseLeave={() => setSelfHovered(false)}
       style={{
-        top: "var(--header-height)",
-        backgroundColor: "var(--surface-blur)",
-        borderBottom: "var(--border-width) solid var(--border-color)",
-        borderTop: "var(--border-width) solid var(--border-color)",
+        color: hovered ? bgColor : textColor,
+        transition: "color 400ms ease-out",
       }}
     >
-      {links.map((link) => {
-        const isActive = activeSection === link.id;
-        return (
-          <div key={link.id} className="relative flex items-center gap-0">
-            {/* Animated dot */}
-            <span
-              className="inline-block overflow-hidden"
-              style={{
-                width: isActive ? "18px" : "0px",
-                opacity: isActive ? 1 : 0,
-                transition: "all var(--transition-normal) ease-in-out",
-              }}
-            >
-              <span className="text-white text-[8px]">●</span>
-            </span>
-
-            {/* Label */}
-            {isActive ? (
-              <a
-                href={`#${link.id}`}
-                className="text-[11px] uppercase"
-                style={{ color: "var(--color-text)" }}
-              >
-                {link.label}
-              </a>
-            ) : (
-              <AnimatedLink
-                href={`#${link.id}`}
-                className="text-[11px] uppercase px-1 py-0.5"
-                textColor="var(--color-text-muted)"
-                bgColor="#000000"
-              >
-                {link.label}
-              </AnimatedLink>
-            )}
-          </div>
-        );
-      })}
-    </nav>
+      {/* Background sweep */}
+      <span
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundColor: sweepColor,
+          transform: hovered ? "scaleX(1)" : "scaleX(0)",
+          transformOrigin: "left",
+          transition: "transform 400ms ease-out",
+        }}
+      />
+      {/* Text */}
+      <span className="relative z-10">{children}</span>
+    </Tag>
   );
 }
