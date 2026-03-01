@@ -26,7 +26,10 @@ export default function Hero() {
             muted
             loop
             playsInline
+            disablePictureInPicture
+            controlsList="nodownload nofullscreen noremoteplayback"
             className="w-full h-full object-cover"
+            style={{ pointerEvents: "none" }}
           />
           <div className="absolute inset-0 bg-black/70" />
         </div>
