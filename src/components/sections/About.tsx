@@ -28,10 +28,6 @@ const trailImages: TrailImage[] = [
     slug: "vaglio-and-partners",
   },
   {
-    src: "/projects/vaglio-and-partners/gallery-3.png",
-    slug: "vaglio-and-partners",
-  },
-  {
     src: "/projects/vaglio-and-partners/gallery-4.jpg",
     slug: "vaglio-and-partners",
   },
