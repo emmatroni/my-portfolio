@@ -29,4 +29,4 @@ npm run dev
 
 ## Contact
 
-[emma@troni.it](mailto:emma@troni.it) · [LinkedIn](https://linkedin.com) · [Instagram](https://instagram.com) · [GitHub](https://github.com)
+[emma@troni.it](mailto:emma@troni.it) · [LinkedIn](https://www.linkedin.com/in/emmatroni/) · [Instagram](https://www.instagram.com/emma_troni/) · [GitHub](https://github.com/emmatroni)
