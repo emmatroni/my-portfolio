@@ -1,4 +1,4 @@
-# Emma Troni — Portfolio
+# Emma Troni Portfolio
 
 Personal portfolio showcasing my work in communication design, branding, editorial, and web design.
 
