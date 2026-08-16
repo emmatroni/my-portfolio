@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" fill="none">
+  <!-- Group route: navy, solid, gently waving like the Philo thread -->
+  <path d="M 80 300
+           C 160 260, 220 260, 300 300
+           C 360 330, 420 330, 480 300
+           C 540 270, 600 250, 660 260
+           C 740 274, 800 300, 880 300
+           C 960 300, 1020 280, 1120 280"
+        stroke="#39457E" stroke-width="7" stroke-linecap="round"/>
+
+  <!-- Member path: red, dashed, forks before stop 2 and rejoins before stop 3 -->
+  <path d="M 80 300
+           C 160 260, 220 260, 300 300"
+        stroke="#C3392C" stroke-width="6" stroke-linecap="round" stroke-dasharray="1 18"/>
+  <path d="M 300 300
+           C 380 360, 460 420, 560 420
+           C 660 420, 740 380, 820 320
+           C 840 306, 860 300, 880 300"
+        stroke="#C3392C" stroke-width="6" stroke-linecap="round" stroke-dasharray="1 18"/>
+
+  <!-- Stops -->
+  <circle cx="80"  cy="300" r="16" fill="#39457E"/>
+  <circle cx="80"  cy="300" r="7"  fill="#FAFAF7"/>
+
+  <circle cx="480" cy="300" r="16" fill="#39457E"/>
+  <circle cx="480" cy="300" r="7"  fill="#FAFAF7"/>
+
+  <circle cx="880" cy="300" r="16" fill="#39457E"/>
+  <circle cx="880" cy="300" r="7"  fill="#FAFAF7"/>
+
+  <circle cx="1120" cy="280" r="16" fill="#39457E"/>
+  <circle cx="1120" cy="280" r="7"  fill="#FAFAF7"/>
+
+  <!-- Fork and rejoin markers -->
+  <circle cx="300" cy="300" r="11" fill="#C3392C"/>
+  <circle cx="300" cy="300" r="4.5" fill="#FAFAF7"/>
+
+  <!-- Labels -->
+  <text x="80" y="352" font-family="Poppins, Helvetica, Arial, sans-serif" font-size="22" fill="#8A8A85" text-anchor="middle">Start</text>
+  <text x="300" y="248" font-family="Poppins, Helvetica, Arial, sans-serif" font-size="22" fill="#C3392C" text-anchor="middle">One visitor opts out</text>
+  <text x="480" y="352" font-family="Poppins, Helvetica, Arial, sans-serif" font-size="22" fill="#8A8A85" text-anchor="middle">Stop the group visits</text>
+  <text x="560" y="470" font-family="Poppins, Helvetica, Arial, sans-serif" font-size="22" fill="#C3392C" text-anchor="middle">Their path re-plans on its own</text>
+  <text x="880" y="352" font-family="Poppins, Helvetica, Arial, sans-serif" font-size="22" fill="#8A8A85" text-anchor="middle">Rejoins here</text>
+  <text x="1120" y="332" font-family="Poppins, Helvetica, Arial, sans-serif" font-size="22" fill="#8A8A85" text-anchor="middle">Next stop</text>
+</svg>

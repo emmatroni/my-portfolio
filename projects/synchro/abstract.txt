@@ -5,3 +5,36 @@ The project takes shape through the Chronodex, an interactive device that record
 [IT] E SE IL TEMPO FOSSE UNO STRUMENTO DI POTERE?
 SYNCHRO esplora il conflitto metrico contemporaneo, interrogandosi sul tempo non come misura neutrale, ma come strumento di controllo e potere geopolitico. A partire dalla domanda: “e se il tempo fosse uno strumento di potere?”, il progetto immagina uno scenario in cui la definizione dell’ora di riferimento globale diventa oggetto di competizione tra Stati. In questo contesto nasce lo Zero Hour Day, un evento annuale durante il quale SYNCHRO misura il livello di sincronizzazione delle routine quotidiane dei cittadini di ogni Paese. La nazione più sincronizzata ottiene il diritto di imporre il proprio fuso orario come standard globale, rivelando come anche i sistemi apparentemente oggettivi possano diventare strumenti di egemonia.
 Il progetto prende forma attraverso il Chronodex, un dispositivo interattivo che registra la distribuzione delle attività quotidiane degli utenti. All’interno di una cabina dedicata, ogni partecipante ricostruisce la propria giornata suddividendo le ventiquattro ore in quattro categorie fondamentali: sonno, alimentazione, lavoro e altre attività. I dati raccolti vengono trasmessi in tempo reale e contribuiscono alla definizione dell’indice di sincronizzazione nazionale. Attraverso questo processo, SYNCHRO riflette criticamente sul rapporto tra misurazione, partecipazione e controllo, mettendo in discussione il ruolo delle metriche nella costruzione degli equilibri politici e sociali contemporanei.
+
+
+VISUAL IDENTITY
+lo scenario di Zero Hour Day nasce quindi da un conflitto molto concreto: quello per il controllo del tempo su scala globale, una delle nostre sfide progettuali è stata quella di tradurre questo conflitto e il tempo stesso  in un linguaggio visivo creando però due sistemi di identità distinti ma complementari: quello aziendale di Synchro e quello istituzionale di Zero Hour Day. come si può quindi rappresentare visivamente il tempo? La grande frattura nella percezione del tempo attraversa le civiltà, tra due modelli fondamentali: la circolarità e la linearità. Per l’uomo delle società arcaiche il tempo è ciclico; si percepisce come parte integrante dei ritmi cosmici.
+l’uomo moderno, al contrario, accetta il tempo come vettore lineare in cui ogni evento è unico e irripetibile.
+ 
+ll tempo non ha quindi una rappresentazione visiva univoca: ogni cultura lo costruisce, lo organizza, lo racconta a modo suo, nel corso degli anni e nelle diverse società è stato quindi rappresentato come un qualcosa di irregolare, ciclico ma allo stesso tempo lineare , questa oscillazione tra circolarità e linearità è diventata il principio concettuale e l'ambivalenza che ha guidato ogni nostra scelta progettuale
+
+nasce così Synchro il partner tecnico istituzionale di riferimento per la misurazione e la gestione del tempo su scala globale. la sua identità si basa su una composizione circolare costituita da due raggiere
+Ogni raggiera è formata da 24 tacchette, che richiamano le 24 ore della giornata e i 24 fusi orari globali,
+Il payoff"Time for change "racchiude questa promessa, sintetizzando l’impegno di Synchro a trasformare radicalmente il rapporto dell’umanità con il tempo.
+Ogni messaggio è costruito per informare con precisione, senza elementi superflui, si predilige l'uso quindi di un nero desaturato come colore neutro affiancato al viola, come colore distintivo dell'azienda utilizzato tramite gradienti per non risultare eccessivo.
+le raggiere sono ruotate e disallineate tra loro, questa disposizione evoca l’immaginario dei meccanismi di misurazione del tempo e dei dispositivi di sincronizzazione e introduce una tensione visiva controllata che allude alla complessità della sincronizzazione globale che Synchro è chiamata a gestire. La tipografia adottata è Helvetica Noie, una revisione sistematica dell’Helvetica originale.
+Ellen Lupton (2004) descrive Helvetica come uno dei caratteri più diffusi al mondo, con una  struttura uniforme e verticale, tanto da essere definito «anonymous sans serif» non un giudizio per definirlo generico, ma la descrizione di un carattere capace di farsi trasparente rispetto al contenuto che veicola.
+L'azienda si presenta quindi con un sistema di identità visivo coerente e uniforme in tutta la sua comunicazione, partendo dal sito fino ai materiali a supporto della macchina
+
+All'interno del sito l'azienda propone tutti i suoi prodotti per la misurazione del tempo e le loro specifiche tecniche
+Synchro deve comunicare: affidabilità tecnica, rigore, autorevolezza e gestire l'identità dello Zero Hour Day
+Il suo interlocutore non è il consumatore finale, ma un'istituzione, le Nazioni Unite.
+
+Zero Hour Day deve quindi adattarsi e uniformarsi al linguaggio delle nazioni unite, nasce per sottrazione dal sistema di Synchro è una declinazione del suo linguaggio visivo resa più istituzionale.
+Il sistema di comunicazione dello Zero Hour Day si articola attraverso 3 livelli informativi sovrapposti e gerarchizzati.
+
+il primo è la comunicazione istituzionale dell’evento: data, luogo, contesto, informazioni presentate con la chiarezza sintetica che caratterizza la comunicazione di eventi su scala globale. 
+ Il secondo livello è la comunicazione di senso: perché partecipare, cosa significa questo evento, qual è la posta in gioco. 
+Il terzo livello è la comunicazione operativa: come partecipare, dove trovare i centri di raccolta dati, come si utilizza il dispositivo Chronodex.
+
+Il tono di Zero Hour Day eredita da Synchro il rigore e la professionalità, ma lo adatta alle esigenze di un evento rivolto alla cittadinanza globale.
+
+questi manifesti sono la traduzione visiva di questi 3 livelli
+si mantengono i graidenti di synchro ma vengono eliminati i colori per rendere l'identità istituzionale con l'utilizzo di una tipografia condensed, usata in corpi grandi per costruire una gerarchia visiva tipica del manifesto, e l'utilizzo di una griglia regolare
+ll messaggio della campagna, *"One World. One Time Zone"*, è forse l'elemento che racchiude meglio tutto il progetto. È una frase che sembra descrivere un fatto naturale ma che in realtà nasconde una decisione politica radicale: l'imposizione di un unico fuso orario globale.
+La traduzione visiva della giornata nasce quindi dal principio teorico da cui siamo partiti, e si concretizza nell'utilizzo territori irregolari, di linee rette e circolari.
