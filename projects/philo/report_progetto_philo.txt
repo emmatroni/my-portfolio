@@ -1,0 +1,512 @@
+================================================================================
+REPORT DI PROGETTO — PHILO
+Sistema di visite culturali personalizzate basato su assistente virtuale AI
+================================================================================
+
+1. DATI GENERALI
+--------------------------------------------------------------------------------
+Nome progetto:      Philo
+Assistente AI:      Phil (assistente virtuale vocale personalizzato)
+Settore:            System design
+Ruolo nel team:     UX/UI design lead; graphic design; produzione video e foto
+Durata:             6 mesi
+Team:               6 persone
+Anno:               2024
+Piattaforma:        Web app
+
+
+2. CONTESTO E PROBLEMA
+--------------------------------------------------------------------------------
+Il patrimonio culturale è una fonte inesauribile di ispirazione e conoscenza,
+ma la sua fruizione risulta spesso complicata e insoddisfacente. I problemi
+individuati sono:
+
+- Molti visitatori desiderano itinerari che si adattino a interessi, tempo
+  disponibile ed esigenze personali, ma faticano a trovare soluzioni adeguate.
+- Altri si sentono sopraffatti da un eccesso di informazioni generiche e
+  irrilevanti (overload informativo), che rende l'esperienza meno appagante.
+- Percorsi rigidi ed esperienze percepite come non rilevanti per il singolo
+  visitatore.
+- Il patrimonio culturale è ovunque, ma accedervi realmente resta difficile.
+
+Philo nasce in questo contesto: un sistema pensato per offrire itinerari
+culturali personalizzati, semplici e coinvolgenti, capaci di trasformare ogni
+visita in un'esperienza unica e significativa.
+
+
+3. OBIETTIVI DEL PROGETTO (DESIGN BRIEF)
+--------------------------------------------------------------------------------
+- Rivoluzionare l'accesso alle risorse culturali con percorsi personalizzati e
+  significativi, evitando l'overload informativo e lasciando un impatto
+  duraturo sull'utente.
+- Accompagnare la persona in modo dedicato lungo l'intera esperienza: dalla
+  preparazione della visita fino al feedback post-esperienza, con un sistema
+  che si evolve e si adatta continuamente.
+- Privilegiare la qualità sulla quantità: non vedere tutto in fretta, ma
+  approfondire ciò che davvero interessa, in funzione del tempo a disposizione
+  e degli interessi personali.
+- Trasformare le visite culturali in un'abitudine frequente e accessibile,
+  parte integrante della quotidianità.
+- Semplificare la fase di acquisto dei biglietti, con risparmio di tempo
+  (niente file in biglietteria né trafile di acquisto online) e di denaro
+  (riduzioni proporzionali all'effettivo tempo di visita), affinché il prezzo
+  non sia un disincentivo alla visita.
+- Creare un legame più profondo e personale tra utenti e patrimonio culturale.
+
+
+4. DESIGN CONCEPT E FUNZIONAMENTO
+--------------------------------------------------------------------------------
+4.1 Onboarding e profilo
+- La creazione del profilo è obbligatoria e avviene tramite intervista/dialogo
+  con un assistente vocale AI (informazioni personali, temi, interessi).
+- Durante la prima interazione viene generato il "ritratto d'arte": un avatar
+  virtuale dell'utente che si modella in base agli interessi e ai percorsi
+  effettuati, affinando la personalizzazione di utilizzo in utilizzo.
+
+4.2 Struttura dell'applicazione
+La web app è composta da tre pagine principali:
+- "Percorsi consigliati per te": generati in base a filtri e interessi.
+- "Percorsi di altri utenti con i tuoi stessi interessi": itinerari già
+  effettuati da utenti affini.
+- "Crea": creazione di percorsi personalizzati sulla base dei filtri e degli
+  interessi specifici dell'utente; il sistema genera diverse proposte di
+  visita tra cui scegliere.
+
+Filtri di ricerca disponibili:
+- luogo e data della visita (espressi all'apertura dell'app);
+- tempo a disposizione da dedicare all'esperienza;
+- accessibilità fisica alle strutture;
+- interessi/tematiche specifiche.
+
+I percorsi possono unire una o più istituzioni culturali nella stessa visita,
+in base al tempo indicato dall'utente. È possibile scegliere tra percorsi
+generati ad hoc o pre-confezionati.
+
+4.3 Navigazione e mappe
+- Percorso per raggiungere il luogo della visita e mappa interna della
+  struttura.
+- Mappa digitale in app (stile Google Maps) e possibilità di stampa della
+  mappa (mappa città/quartiere e planimetrie dei singoli luoghi, ottenute dai
+  partner; riferimento citato: la replica 3D della Basilica di San Pietro
+  realizzata con Microsoft AI).
+
+4.4 Phil — l'assistente vocale personale
+- Accompagna il visitatore durante il percorso.
+- Fornisce spiegazioni nella lingua desiderata, adattando voce e stile
+  comunicativo alle preferenze del visitatore.
+- Consente l'interazione in tempo reale: l'utente può porre domande e
+  approfondire in qualunque momento.
+- Livelli di approfondimento selezionabili (1-2-3), per scegliere tra
+  spiegazioni più globali (argomenti poco conosciuti) o più approfondite.
+- Possibilità di attivare la descrizione solo in determinati momenti.
+- Le spiegazioni partono dalle didascalie fornite dal museo; l'AI seleziona le
+  informazioni da proporre in base al livello scelto.
+- Utilizzo con i propri auricolari (evitando dispositivi scomodi in prestito).
+
+Modalità di fruizione alternative previste:
+- Audioguida realizzata in collaborazione con importanti figure culturali
+  (spiegazioni prefatte di singole opere), attivabile in momenti specifici.
+- Guida fisica: con preavviso minimo obbligatorio, in collaborazione con
+  partner abilitati a guida turistica ed esperti del tema (limite burocratico
+  segnalato), con sovrapprezzo.
+
+4.5 Modello di prezzo
+- Pagamento in funzione del tempo effettivamente trascorso nei luoghi
+  culturali, verificato tramite tecnologie attualmente disponibili.
+- Riduzioni proporzionali al tempo di visita per contenere il costo dei
+  percorsi che uniscono più istituzioni, incentivando percorsi consapevoli.
+
+4.6 Visite di gruppo
+- Definiti partecipanti, data, luogo e tema principale, ogni utente può
+  apportare modifiche personali al proprio percorso rispettando i tempi
+  previsti per l'esperienza comune.
+- Se un membro preferisce saltare una tappa, il sistema propone esperienze
+  alternative da vivere nello stesso intervallo di tempo, senza interrompere
+  il programma collettivo.
+
+4.7 Visite in famiglia
+- "Profilo famiglia": spiegazioni pensate appositamente per i bambini, che gli
+  adulti possono raccontare ai più piccoli durante il percorso, creando
+  un'esperienza condivisa e arricchente per tutti i membri.
+
+4.8 Post-visita
+- Feedback al termine dell'esperienza ("il percorso era adatto a te?", "cosa
+  non ti è piaciuto"): più il sistema viene usato, più si affina.
+
+4.9 Interfaccia principale — funzioni previste nell'interaction flow
+- Filtro in base a posizione e distanza/raggio (possibilità di più visite in
+  giorni diversi nello stesso luogo); riconoscimento della posizione con
+  proposta di cercare lì o altrove.
+- Bacheca di ispirazione (ipotesi in stile Pinterest).
+- Proposte di percorso in base a tempo disponibile e/o tema specifico:
+  percorsi "per te", top 10 (in stile Netflix, da valutare rispetto alla
+  gestione dei flussi), percorsi scelti per te (già fatti da altri), percorsi
+  correlati a quelli già effettuati, percorsi salvati, percorso creato
+  dall'utente (orario, tempo, zona, tematiche, es. 3 proposte tra cui
+  scegliere).
+- Creazione del percorso tramite parola chiave o nuovi filtri.
+
+
+5. PROCESSO DI RICERCA
+--------------------------------------------------------------------------------
+5.1 Timeline del progetto
+Tappe principali: ricerca iniziale → definizione delle linee guida di
+progetto → definizione di un possibile scenario futuro.
+
+5.2 Ricerca individuale e desk research
+- Fase iniziale: ricerca individuale di ciascun membro del team su temi di
+  attualità come base del progetto; focalizzazione finale sul concetto di
+  fruizione delle risorse culturali.
+- La desk research ha evidenziato una mancanza di informazioni fondamentali
+  nell'ambito delle istituzioni museali: i report di visitor studies in Italia
+  sono spesso assenti o non pubblici, il che rende difficile comprendere le
+  esigenze dei visitatori e limita le possibilità di miglioramento.
+
+5.3 Ricerca sul campo
+- Circa 300 risposte raccolte tramite Google Form (291 risposte al
+  questionario più interviste sul campo), per identificare i temi fondamentali
+  su cui costruire il progetto.
+- Ambiti di intervento emersi:
+  * migliorare l'efficacia delle informazioni (didascalie e audioguide);
+  * ottimizzare i flussi di visitatori e il tempo a disposizione (risposta al
+    sovraffollamento di determinate strutture);
+  * creazione di percorsi su misura.
+
+5.4 Key findings della ricerca sul campo
+- Accesso al patrimonio culturale percepito come una sfida: i visitatori
+  vogliono itinerari adattati a interessi, tempo ed esigenze personali, ma
+  faticano a trovarli. Testimonianza (studente universitario): mostre ed
+  eventi sovrapposti, con la sensazione di non avere tempo o mezzi economici
+  per vederli.
+- Quando l'informazione ostacola: eccesso di informazioni generiche e
+  irrilevanti che rende l'esperienza meno soddisfacente (testimonianza di un
+  architetto).
+- Fine del "one-size-fits-all": i visitatori si aspettano sempre più
+  esperienze culturali adattive; la domanda di percorsi personalizzati,
+  specialmente tra il pubblico più giovane, evidenzia il bisogno di approcci
+  più flessibili e centrati sull'utente.
+
+5.5 Dalla ricerca alle decisioni di design
+- "Decidere di andare" (Lorenzo, studente universitario: troppe mostre
+  sovrapposte, poco tempo e denaro) → Soluzione 1: il prezzo segue la visita,
+  non il biglietto; le categorie sono presentate come opere d'arte non
+  ritagliate, così la prima interazione è già osservazione dell'arte.
+- "Scegliere il percorso" (Franca, architetto: distanza percepita tra sé e le
+  opere, come fossero disconnesse) → Soluzione 2: il percorso è costruito
+  dagli interessi dell'utente; ogni tappa esiste perché scelta dal filo
+  tematico dell'utente, non perché successiva nell'ordine del museo.
+- "Stare nella sala" (Anna, consulente: desiderio di modi più interattivi per
+  avvicinarsi all'opera con tutti i sensi) → Soluzione 3: si sceglie
+  guardando, non leggendo; il percorso diventa una conversazione
+  interrompibile, con una voce che mantiene l'attenzione sull'opera e non su
+  uno schermo.
+
+5.6 Problemi rilevati su audioguide e didascalie
+- Si rivolgono a un pubblico generico e senza mezze misure: o troppo
+  specifiche o troppo generiche. Molte persone tendono a leggere le
+  spiegazioni dedicate ai bambini perché hanno un target di riferimento e
+  risultano spesso più chiare.
+- Non sono interattive: il visitatore deve approfondire da solo, con altri
+  mezzi, ciò che gli interessa.
+- Risposta progettuale: audioguide AI con 3 livelli di approfondimento
+  selezionabili a priori e possibilità di interazione tramite domande.
+
+5.7 Rete con le istituzioni
+- Intenzione di partire collaborando con musei statali e privati per creare
+  una rete e ottenere le catalogazioni esistenti delle opere, così da creare
+  tag di ricerca e permettere percorsi su qualsiasi argomento.
+
+
+6. MAPPING DELL'ESPERIENZA UTENTE
+--------------------------------------------------------------------------------
+6.1 Personas (3 cluster)
+1) Target principale 20-30 anni — universitario / giovane lavoratore.
+   Bisogni: esperienza personalizzata in base a necessità e curiosità;
+   maggiore interattività attraverso la tecnologia.
+   Problemi: prezzo elevato; mancanza di tempo; assenza di interattività;
+   difficoltà nella scelta di quali artefatti osservare e quanto tempo
+   dedicare loro.
+2) Genitore/i con figli.
+   Bisogni: percorsi tematici strutturati che si adattino alle conoscenze di
+   base e alle necessità proprie e della famiglia.
+   Problemi: mancanza di tempo; difficoltà nel condividere l'esperienza della
+   visita con la famiglia; difficoltà nella scelta degli artefatti e del tempo
+   da dedicare loro.
+3) Adulto dai 50 anni in poi, con eventuale difficoltà di movimento o
+   disabilità.
+   Bisogni: percorsi alternativi arricchenti; rapporto umano con una guida che
+   costruisca la visita in base alle sue curiosità.
+   Problema principale: eccessivo affollamento.
+
+Le personas sono state sviluppate per rispondere a needs, problems e
+opportunities emersi dalla ricerca.
+
+6.2 Strumenti di mappatura
+- Ecosystem Map: rappresentazione complessiva del servizio e dei suoi attori,
+  utilizzata per individuare le criticità.
+- Customer Journey Map: una per ciascuna persona, per mappare i diversi modi
+  di interazione con il sistema. Quattro scenari mappati: visita singola,
+  visita in gruppo, visita in famiglia, visita con ridotta mobilità.
+- Poster scenario con mood board e primo interaction flow per delineare il
+  progetto.
+
+
+7. BUSINESS MODEL CANVAS
+--------------------------------------------------------------------------------
+7.1 Key Partners
+- Istituzioni culturali: offerta di un flusso di visitatori più distribuito e
+  costante; possibili sconti sul prezzo dei biglietti; cataloghi degli
+  artefatti con tag caratteristici; planimetrie dei percorsi.
+- Social media: profilazione più accurata per proporre percorsi più efficaci.
+- Google Maps: servizio per generare percorsi.
+
+7.2 Key Activities
+- Dialogo con le istituzioni: descrizioni e catalogazione degli artefatti.
+- Profilazione utenti: per un'esperienza custom made.
+- Percorsi personalizzati: algoritmo basato su filtri di tempo, luogo, prezzo,
+  livello di approfondimento della spiegazione, argomento e tematica
+  (catalogazione).
+- Guida AI: per interazioni customizzate nel corso della visita.
+
+7.3 Key Resources
+- Istituzioni culturali; AI; programmatori; data analyst; database artefatti
+  catalogati; database clienti; partner commerciali (inserzioni, aziende,
+  istituzioni culturali partner).
+
+7.4 Customer Relationships
+- Self service; servizi automatici; co-creazione dei contenuti; assistenza
+  personale (chat/call center).
+
+7.5 Channels
+- Sistema/piattaforma; pubblicità; social media; istituzioni culturali
+  (sponsorizzazione reciproca).
+
+7.6 Cost Structure
+- Programmazione dell'algoritmo; creazione dell'AI di supporto alla visita;
+  programmatori per il mantenimento e l'aggiornamento del servizio; personale;
+  pubblicità del servizio.
+
+7.7 Revenue Streams
+- Rincaro percentuale sul percorso; pubblicità e inserzioni; finanziamenti da
+  parte di aziende (convenienti per sgravi fiscali).
+
+Nota: nel documento, il contenuto interno dei diagrammi "Value Proposition
+Canvas" e "Customer Segments" del canvas è dichiarato illeggibile alla
+risoluzione disponibile; i contenuti corrispondenti sono riportati nelle
+sezioni dedicate seguenti.
+
+
+8. VALUE PROPOSITION CANVAS
+--------------------------------------------------------------------------------
+8.1 Prodotti & Servizi (da essential a nice to have)
+Sistema/piattaforma:
+- customizzazione dei percorsi in base a diversi criteri;
+- mappe e percorsi per le visite;
+- audioguida interattiva e automatica;
+- servizio di customer care;
+- proposta di percorsi affini agli interessi dell'utente;
+- proposta di percorsi alternativi agli interessi per ampliare l'offerta;
+- riduzione dei prezzi/convenzioni;
+- guide museali fisiche.
+
+8.2 Generatori di Vantaggi (da essential a nice to have, per categoria)
+Organizzazione:
+- utilizzo del tempo in modo più consapevole da parte dell'utente;
+- distribuzione vantaggiosa dei flussi di visitatori per le istituzioni.
+Esperienza:
+- rende la visita più semplice e fruibile;
+- esperienza custom-made per l'utente.
+Promozione culturale:
+- arricchisce culturalmente l'utente;
+- maggiore visibilità per le istituzioni culturali.
+
+8.3 Riduttori di Difficoltà (da essential a nice to have, per categoria)
+Savings:
+- risparmio di tempo ed energie nella programmazione delle visite;
+- risparmio nell'acquisto dei biglietti grazie a convenzioni con le
+  istituzioni.
+Social consequences:
+- riduzione del disagio dovuto all'eccessivo affollamento (gestione dei
+  flussi di visitatori);
+- riduzione del senso di inadeguatezza dovuto alla mancanza di conoscenze di
+  base, grazie a spiegazioni personalizzate.
+Make it easier:
+- libera l'utente dalla preoccupazione dell'organizzazione;
+- risparmia all'utente la ricerca di informazioni sulla visita.
+
+
+9. PROFILO DEL CLIENTE (CUSTOMER SEGMENTS)
+--------------------------------------------------------------------------------
+9.1 Vantaggi (da essential a nice to have)
+- supporto nella pianificazione della visita;
+- suggerimenti per un uso del tempo consapevole;
+- personalizzazione delle spiegazioni degli argomenti della visita;
+- possibilità di interazione durante la visita;
+- selezione di orari in cui l'istituzione risulta meno affollata.
+
+9.2 Attività del cliente (da important a insignificant)
+- organizzare percorsi di visita;
+- acquistare biglietti;
+- organizzare il proprio tempo in maniera ottimale;
+- reperire informazioni sui temi della visita;
+- scoprire istituzioni culturali sconosciute;
+- identificare le fasce orarie ideali per la visita.
+
+9.3 Difficoltà / Sofferenze (da extreme a moderate)
+- frustrazione nella ricerca e nell'organizzazione;
+- mancanza di tempo;
+- spaesamento / mancanza di un percorso da seguire;
+- problematiche nella prenotazione;
+- difficoltà a ottenere informazioni/contenuti inerenti alla visita;
+- disagio dovuto all'eccessivo affollamento.
+
+
+10. INTERACTION FLOW (SINTESI DELLE FASI)
+--------------------------------------------------------------------------------
+0.0 Creazione del profilo (obbligatoria): informazioni personali, temi,
+    interessi; intervista con l'AI.
+0.1 Interfaccia principale: filtro per posizione e distanza/raggio; bacheca
+    di ispirazione; proposte di percorso per tempo e/o tema (per te, top 10,
+    scelti per te, correlati, salvati, creati dall'utente); pagine dedicate a
+    percorsi di altri utenti potenzialmente interessanti e alla creazione di
+    un percorso tramite parola chiave o nuovi filtri.
+0.2 Creazione del percorso: visualizzazione su mappa digitale o stampata;
+    modalità di fruizione delle informazioni (audioguida AI personalizzata con
+    livelli 1-2-3 e dialogo interattivo; audioguida con figure culturali;
+    guida fisica su prenotazione con sovrapprezzo); selezione delle
+    informazioni a partire dalle didascalie museali in base al livello di
+    dettaglio scelto.
+0.3 Fine visita: raccolta feedback; il sistema si affina con l'uso.
+
+
+11. VALORE E POTENZIALE
+--------------------------------------------------------------------------------
+- Philo semplifica e arricchisce le esperienze culturali, aiutando gli utenti
+  a superare le difficoltà incontrate.
+- Guida il visitatore dalla gestione della prenotazione, con risparmio di
+  tempo ed energie organizzative.
+- L'utente, guidato da Phil, si sente protagonista di un'esperienza costruita
+  su misura per lui.
+- Incentiva l'accesso alla cultura: arricchisce l'utente da un lato e
+  promuove le istituzioni culturali dall'altro.
+- Ulteriori vantaggi: completa personalizzazione della fruizione (contenuti e
+  modalità), uso più consapevole del tempo, prezzo proporzionale
+  all'effettivo tempo di visita.
+
+
+12. SCENARI FUTURI
+--------------------------------------------------------------------------------
+Medio termine:
+- Uscire dalle barriere del museo e "museificare" le collezioni.
+- Museificazione dei ricordi: archivi e testimonianze di persone che hanno
+  vissuto determinate epoche, da archiviare e documentare.
+- Piattaforma che si amplia come si amplia il significato di cultura, con
+  evoluzione dell'esperienza utente.
+
+Lungo termine:
+- Museo che si compone in base a chi vi entra.
+- Possibilità di visionare le opere nel proprio contesto originario —
+  immersione nell'opera.
+- Piattaforma come "Spotify per artisti" rivolta ad artisti digitali.
+- NFT: opere digitali con blockchain a garanzia dell'autenticità dell'opera.
+
+
+13. COMUNICAZIONE E IDENTITÀ VISIVA
+--------------------------------------------------------------------------------
+Materiali di comunicazione realizzati: brochure, poster e video.
+
+13.1 Logo
+Il logo è un logotipo (wordmark): la scritta "Philo" in carattere sans serif
+bold, con iniziale maiuscola e minuscole, in bianco. Dietro al logotipo corre
+un tratto calligrafico rosso a mano libera (una firma/scarabocchio in stile
+script), che crea un contrasto tra la geometria pulita del sans serif e il
+gesto manuale — richiamo al binomio tecnologia/arte al centro del progetto.
+
+13.2 Font family
+Font di progetto dichiarato: DM Sans. È il carattere utilizzato in tutta
+l'identità (logotipo, poster, tagline, customer journey map: titoli, etichette
+di riga e testi descrittivi), declinato nei pesi bold per titoli ed evidenze e
+regular per i testi correnti.
+
+13.3 Palette colori
+La palette (documentata in una tavola dedicata, con indicazione d'uso per
+sfondo, icone ed elementi) è così composta:
+
+Colori primari:
+- Sfondo:    grigio chiaro caldo, circa #E5E3E2
+- Icone:     rosso cremisi, circa #C2445A
+- Elementi:  blu navy scuro, circa #32365A
+
+Colori secondari:
+- Icone:     rosso cremisi scuro, circa #AB3D51
+- Elementi:  blu-viola medio, circa #454869 (stato "selected")
+- Stato "selectable": grigio-azzurro chiaro, circa #BFC1CC
+
+La logica della palette è funzionale all'interfaccia: distingue sfondi, icone
+ed elementi e codifica gli stati interattivi (selected/selectable) con
+variazioni tonali degli stessi colori.
+
+13.4 Poster / copertina di comunicazione
+Il poster ha fondo blu navy (#32365A) e presenta il logotipo bianco "Philo"
+con il tratto rosso retrostante in alto a sinistra. L'immagine centrale è una
+composizione a split verticale che accosta due metà di ritratti femminili di
+epoche e linguaggi opposti: a sinistra metà di un ritratto pittorico
+classico/rinascimentale (dama con abito ricamato, maniche rosse e stemma
+araldico), a destra metà di un ritratto cubista in stile Picasso (donna con
+cappello blu). Le due metà, affiancate e sfalsate, compongono un'unica figura:
+la sintesi visiva del concetto di percorso personalizzato che attraversa
+epoche e linguaggi diversi dell'arte (coerente con la scelta progettuale delle
+"categorie presentate come opere non ritagliate"). In basso e sul lato destro,
+in bianco, la tagline su due direttrici: "La tua cultura" (orizzontale) e
+"Il tuo percorso" (verticale).
+
+13.5 Customer Journey Map (4 tavole allegate)
+Le quattro CJM condividono lo stesso impianto grafico: tabella a righe
+(Obiettivi, Orario, Azioni, Problemi, Opportunità, Touch points, Emozioni,
+Experience) per cinque fasi (Consapevolezza, Considerazione, Pianificazione,
+Visita, Post-visita), illustrazioni line-art in nero, icone per touch points
+ed emozioni, curva finale dell'esperienza con indicazione di "lowest" e
+"highest interaction". Cambia il colore dominante per distinguere la persona:
+
+- CJM 1 — Veronica, esperienza individuale (dominante lilla/violetto;
+  problemi in azzurro, opportunità in verde). Scoperta della piattaforma via
+  TikTok, percorso alla Pinacoteca di Brera a Milano cucito sulla
+  disponibilità di tempo; problemi: mancanza di tempo, costo percepito
+  eccessivo, difficoltà di pianificazione, perdersi tra le opere, aspettative
+  disattese; opportunità: percorso basato sul tempo disponibile, prezzo
+  aggiornato su percorso e tempo di visita, organizzazione automatica,
+  suggerimento di opere conformi agli interessi, feedback per affinare
+  l'algoritmo. Emozioni: da annoiata/insoddisfatta ad appagata; picco di
+  interazione nella fase di visita.
+- CJM 2 — Veronica, esperienza di gruppo (stessa dominante lilla). Visita al
+  Museo del Novecento a Milano con i compagni di università; problemi:
+  organizzazione di gruppo complessa, rischio di discriminare chi non parla
+  italiano, interessi divergenti, membri che non vogliono partecipare a una
+  tappa, soddisfazione non uniforme; opportunità: percorsi di gruppo,
+  descrizioni personalizzate in tutte le lingue, percorso generato sugli
+  interessi comuni, alternative nello stesso intervallo di tempo, affinamento
+  dell'algoritmo tramite feedback; avatar che si aggiornano interagendo tra
+  loro a fine visita. Emozioni: da socievole/preoccupata/stressata ad
+  appassionata e divertita.
+- CJM 3 — Francesco (dominante grigio-tortora): genitore che scopre la
+  piattaforma da un podcast e organizza una giornata in famiglia a Roma;
+  problemi: mancanza di tempo, costo delle visite guidate ad hoc, assenza di
+  percorsi su misura per i più piccoli, bambini disinteressati alle guide;
+  opportunità: percorso famiglia a prezzo di favore, spiegazioni pensate per
+  i bambini raccontate dall'accompagnatore, avatar generati a fine giornata,
+  feedback per rendere la visita successiva più interessante. Emozioni: da
+  ispirato/confuso a coinvolto e arricchito/soddisfatto.
+- CJM 4 — Gabriella (dominante rosa/magenta): adulta con infortunio alla
+  gamba che visita i musei di Milano; problemi: non conoscere le novità,
+  troppi turisti, difficoltà a trovare un percorso adatto alla sua
+  condizione, percorsi guidati non modificabili, nessun canale per dubbi o
+  lamentele; opportunità: piattaforma aggiornata di continuo, visite in orari
+  meno affollati con riduzioni di prezzo, percorso accessibile costruito
+  sulle sue necessità, ricalcolo del percorso in base agli interessi durante
+  la visita, servizio di call center post-visita. Emozioni: da incuriosita/
+  interdetta a sorpresa e sollevata.
+
+
+================================================================================
+FINE REPORT
+================================================================================
